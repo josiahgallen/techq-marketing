@@ -1,0 +1,13 @@
+
+node_modules/
+dist/
+.sass-cache/
+.tmp/
+bower_components/
+.DS_Store
+*.orig
+.idea/
+stats.json
+test-results.xml
+coverage/
+npm-debug.log

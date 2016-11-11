@@ -1,14 +1,13 @@
 {
-  "name": "tbd-travel",
+  "name": "techq-marketing",
   "version": "0.0.1",
-  "description": "Blog concept site",
+  "description": "Marketing webpage",
   "repository": {
     "type": "git",
-    "url": "https://github.com/josiahgallen/tbd-travel"
+    "url": "https://github.com/josiahgallen/techq-marketing"
   },
   "dependencies": {
     "classnames": "^2.2.4",
-    "firebase": "^3.4.1",
     "materialize-css": "^0.97.7",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
@@ -65,6 +64,9 @@
     "lint:watch": "esw app",
     "test": "npm run lint && npm run test:node",
     "test:node": "mocha --opts ./mocha.opts",
-    "test:watch": "mocha --opts ./mocha.opts --watch"
+    "test:watch": "mocha --opts ./mocha.opts --watch",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push origin master && git push origin --tags"
   }
 }

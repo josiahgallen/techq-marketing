@@ -2,8 +2,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Firebase from 'firebase/app';
 
-window.Firebase = Firebase;
 window.React = React;
 window.ReactDOM = ReactDOM;

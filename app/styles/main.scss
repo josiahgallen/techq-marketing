@@ -1,1 +1,65 @@
 @import "../../node_modules/materialize-css/sass/materialize.scss";
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Indie+Flower|Open+Sans+Condensed:300');
+//#ef5350 red lighten-1
+//#e53935 red darken-1
+//#81d4fa light-blue lighten-3 **********
+//#03a9f4 light-blue
+//#828282 battleship grey
+//#424242 grey darken-3
+//#fff white
+//#fff8e1 amber lighten-5
+//#d7ccc8 brown lighten-4
+// #616161 grey darken-2
+//#f5f5f5 grey lighten-4
+
+$baseFont: 'OpenSansCondensed', sans-serif;
+$logoFont: 'Fira Mono', monospace;
+$stylizedFont: 'Indie Flower', cursive;
+$white: #fff;
+$greyText: #616161;
+$logoOrange: #ff9800;
+$logoBlue: #03a9f4;
+
+.tech-logo {
+	color: $logoBlue;
+}
+
+.q-logo {
+	color: $logoOrange;
+}
+
+nav {
+	background-color: $white;
+	.brand-logo {
+		font-family: $logoFont;
+		color: $greyText;
+	}
+	.nav-link {
+		color: $greyText;
+	}
+}
+
+.carousel-slider {
+	// div {
+	// 	height: 700px;
+    //     width: 100%;
+	// 	background-repeat: no-repeat;
+	// 	background-size: cover;
+    //     background-position: center;
+	// }
+	.carousel-item:first-child {
+        div {
+            background-image: url('/app/images/apple-flowers-iphone-desk.jpg');
+        }
+	}
+    .carousel-item:nth-child(2) {
+        div {
+            background-image: url('/app/images/asian-girl.jpg');
+        }
+	}
+    .carousel-item:nth-child(3) {
+        div {
+            background-image: url('/app/images/tablet-coffee.jpg');
+        }
+	}
+}

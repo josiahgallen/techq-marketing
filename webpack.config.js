@@ -46,7 +46,7 @@ var common = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Test App',
+			title: 'TechQ Marketing',
 			template: path.resolve(APP_PATH, 'index.html'),
 			// favicon: path.resolve(APP_PATH, 'images', 'favicon.ico'),
 			inject: false

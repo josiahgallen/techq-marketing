@@ -1,7 +1,8 @@
 import './scripts/globals';
 import app from './scripts/app';
 import ReactDOM from 'react-dom';
-import 'materialize-css';
+require('../node_modules/materialize-css/dist/css/materialize.css');
+require('../node_modules/materialize-css/dist/js/materialize.min.js');
 
 //Gathering .scss files from scripts and styles folders
 const baseStyles = require.context('./styles', true, /\.scss$/);

@@ -17,7 +17,8 @@ const Nav = React.createClass({
 					<div className="nav-wrapper">
 						<Link to="/">
 							<span className="brand-logo">
-								<span className="tech-logo">tech</span><span className="q-logo">Q </span>blended marketing
+								<img className="tech-logo" src="/app/images/tempLogo2.png"/>
+								<span className="tag-line">a blended marketing company</span>
 							</span>
 						</Link>
 						<ul className="right hide-on-med-and-down">

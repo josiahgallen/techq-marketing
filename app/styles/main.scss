@@ -11,6 +11,7 @@
 //#d7ccc8 brown lighten-4
 // #616161 grey darken-2
 //#f5f5f5 grey lighten-4
+// $darkenBlue: #0277bd;
 
 $baseFont: 'OpenSansCondensed', sans-serif;
 $logoFont: 'Fira Mono', monospace;
@@ -19,13 +20,30 @@ $white: #fff;
 $greyText: #616161;
 $logoOrange: #ff9800;
 $logoBlue: #03a9f4;
+$greyBackground: #f5f5f5;
+$logoRed: #FF2101;
+$defaultText: #616161;
 
 .tech-logo {
+	height: 50px;
+	width: 170px;
+}
+
+.tag-line {
+	font-style: italic;
+	font-size: 20px;
+}
+
+.emphasis-words {
 	color: $logoBlue;
 }
 
-.q-logo {
-	color: $logoOrange;
+.blurb {
+	font-size: 16px;
+}
+
+.list {
+	text-align: center;
 }
 
 nav {
@@ -39,27 +57,46 @@ nav {
 	}
 }
 
-.carousel-slider {
-	// div {
-	// 	height: 700px;
-    //     width: 100%;
-	// 	background-repeat: no-repeat;
-	// 	background-size: cover;
-    //     background-position: center;
-	// }
-	.carousel-item:first-child {
-        div {
-            background-image: url('/app/images/apple-flowers-iphone-desk.jpg');
-        }
-	}
-    .carousel-item:nth-child(2) {
-        div {
-            background-image: url('/app/images/asian-girl.jpg');
-        }
-	}
-    .carousel-item:nth-child(3) {
-        div {
-            background-image: url('/app/images/tablet-coffee.jpg');
-        }
-	}
+.carousel.carousel-slider.initialized {
+	height: 600px !important;
+}
+
+.carousel-overlay {
+	height: 300px;
+	color: $defaultText;
+	margin: 0;
+}
+
+.succulants-img,
+.granite-img {
+	background-image: url('/app/images/Succulants.jpg');
+	height: inherit;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.granite-img {
+	background-image: url('/app/images/Granite.jpg');
+}
+
+.info-box {
+	background-color: $greyBackground;
+	padding: 10px;
+	opacity: .75;
+}
+
+.row .col {
+	padding: 0;
+}
+
+h5.info-box-header {
+	text-align: center;
+	margin: 0;
+	font-style: italic;
+	// font-family: $baseFont;
+	// font-family: fantasy;
+}
+
+#carousel-row-overlay {
+	bottom: 0;
+	margin-bottom: 0;
 }

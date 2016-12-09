@@ -12,7 +12,11 @@ const Container = React.createClass({
 
 	componentWillMount() {
 		$(document).ready(() => {
-			$('.carousel-slider.carousel').carousel({full_width: true});
+			const $carousel = $('.carousel-slider.carousel');
+			$carousel.carousel({ full_width: true });
+			setInterval(() => {
+				$carousel.carousel('next');
+			}, 10000)
 		});
 	},
 

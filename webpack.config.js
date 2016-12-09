@@ -19,8 +19,8 @@ var precss       = require('precss');
 var common = {
   entry: APP_PATH,
   output: {
-    path: BUILD_PATH,
-    filename: 'bundle.js'
+	path: BUILD_PATH,
+	filename: 'bundle.js'
   },
   module: {
 		loaders: [
@@ -38,7 +38,11 @@ var common = {
 				test: /\.png$/,
 				loader: 'url-loader?limit=8192',
 				include: APP_PATH
-			}
+			},
+			{ test: /\.woff$/, loader: 'url-loader?limit=2500000' },
+			{ test: /\.woff2$/, loader: 'url-loader?limit=1000000' },
+			{ test: /\.eot$/, loader: 'url-loader?limit=1000000' },
+			{ test: /\.ttf/, loader: 'url-loader?limit=1000000' }
 		]
 	},
 	postcss: function () {

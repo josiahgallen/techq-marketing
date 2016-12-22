@@ -48,11 +48,13 @@ const Home = React.createClass({
 				</div>
 				<div className="custom-container">
 					<div className="row large-copy">
-						<h5 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h5>
+						<h4 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h4>
 						<p className="col s12">
 							{blurbs.one}
 						</p>
-						{this._getCarouselLists()}
+						<div className="container">
+							{this._getCarouselLists()}
+						</div>
 						<p className="col s12">
 							{blurbs.two}
 						</p>

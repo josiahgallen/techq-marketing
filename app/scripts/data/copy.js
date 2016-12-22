@@ -6,7 +6,7 @@ export const navLinks = [
 	{ name: 'Resources', path: '#' }
 ];
 
-export const logo = 'production_logo.png';
+export const logo = 'logo-prod.png';
 
 export const carouselImages = [
 	'asian-girl.jpg',
@@ -16,36 +16,38 @@ export const carouselImages = [
 
 export const listTiles = {
 	strategy: [
-		'- Marketing Strategy',
-		'- Positioning & Messaging',
-		'- Content Strategy',
-		'- Go-to-Market Strategy',
-		'- Partnerships & Ecosystems'
+		'Marketing Strategy',
+		'Positioning & Messaging',
+		'Content Strategy',
+		'Go-to-Market Strategy',
+		'Partnerships & Ecosystems'
 	],
 	execution: [
-		'- Product Launches',
-		'- Pricing Model',
-		'- Market Research',
-		'- Competitive Analysis',
-		'- Market & Segment Analysis',
-		'- Content Creation'
+		'Product Launches',
+		'Pricing Model',
+		'Market Research',
+		'Competitive Analysis',
+		'Market & Segment Analysis',
+		'Content Creation'
 	],
 	consulting: [
-		'- Advice & Counsel',
-		'- Workshops'
+		'Digital marketing',
+		'Web design',
+		'Advice & Counsel',
+		'Workshops & presentations'
 	]
 };
 
 export const blurbs = {
-	one: `Specializing in B2B outbound markeing with a technology focus.
+	one: `Specializing in B2B inbound markeing with a technology focus.
 	We help the sales team win deals; attract customers online and
 	convert to wins; serve as baseline for promotional marketing like
-	digital, event, and social, ultiimately help YOU create revenue
+	digital, event, and social, ultimately help YOU create revenue
 	and success.`,
 	two: `Driven by a passion to help technology companies succeed,
-	TechQ marketing works closely with clients to quickly understand
+	techQ marketing works closely with clients to quickly understand
 	the product and create value. Experienced in working with multi-cultural
-	and international teams, TechQ provides uparalleled insights
+	and international teams, techQ provides uparalleled insights
 	and knowledge to the clients. We deliver full-time experience
 	with factional service.`
 };
@@ -79,9 +81,9 @@ export const carouselLists = {
 	four: {
 		title: 'INDUSTRIES',
 		copy: [
-			'Semiconductor',
-			'Industrial automation',
-			'Connected home',
+			'Hardware',
+			'Software & cloud computing',
+			'Commercial & industrial',
 			'Automotive',
 			'Health and fitness'
 		]

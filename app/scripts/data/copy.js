@@ -6,7 +6,7 @@ export const navLinks = [
 	{ name: 'Resources', path: '#' }
 ];
 
-export const logo = 'logo.png';
+export const logo = 'production_logo.png';
 
 export const carouselImages = [
 	'asian-girl.jpg',

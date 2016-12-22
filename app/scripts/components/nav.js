@@ -1,4 +1,4 @@
-/* global React, $ */
+/* global React */
 import { Link } from 'react-router';
 import { navLinks, logo } from '../data/copy';
 import { getImagePath } from '../utils';
@@ -7,8 +7,8 @@ const Nav = React.createClass({
 
 	activeLink(e) {
 		e.preventDefault();
-		e.target.parentNode.classList.add('active')
-		console.log(1,e.target.parentNode);
+		e.target.parentNode.classList.add('active');
+		console.log(1,e.target.parentNode);//eslint-disable-line
 
 	},
 

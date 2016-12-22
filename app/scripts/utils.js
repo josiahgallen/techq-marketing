@@ -1,3 +1,3 @@
 export function getImagePath(img) {
-    return `/app/images/${img}`;
+	return `/app/images/${img}`;
 }

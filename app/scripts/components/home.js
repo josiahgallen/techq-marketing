@@ -1,4 +1,4 @@
-/* global React */
+/* global React, $ */
 
 import CarouselOverlay from './carouselOverlay';
 import ListTile from './listTile';
@@ -9,17 +9,17 @@ const Home = React.createClass({
 
 	componentWillMount() {
 		$(document).ready(() => {
-			console.log('runnin');
+			console.log('runnin');//eslint-disable-line
 			const $carousel = $('.carousel-slider.carousel');
 			$carousel.carousel({ full_width: true });
 			this.changeCarousel = setInterval(() => {
 				$carousel.carousel('next');
-			}, 10000)
+			}, 10000);
 		});
 	},
 
 	componentWillUnmount() {
-		clearInterval(this.changeCarousel)
+		clearInterval(this.changeCarousel);
 	},
 
 	_getCarouselImages() {

@@ -1,7 +1,7 @@
 /* global React */
 
 import { Router, Route, browserHistory } from 'react-router';
-import { Provider } from 'react-redux';
+// import { Provider } from 'react-redux';
 import Nav from './components/nav';
 import Home from './components/home';
 import Company from './components/company';
@@ -13,6 +13,9 @@ require('../../node_modules/materialize-css/dist/js/materialize.min.js');
 
 const Container = React.createClass({
 
+	propTypes: {
+		children: React.PropTypes.object
+	},
 	// componentWillMount() {
 	// 	$(document).ready(() => {
 	// 		console.log('runnin');

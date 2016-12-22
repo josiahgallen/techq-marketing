@@ -1,5 +1,7 @@
 /* global React, $ */
 import { Link } from 'react-router';
+import { navLinks, logo } from '../data/copy';
+import { getImagePath } from '../utils';
 
 const Nav = React.createClass({
 
@@ -10,6 +12,19 @@ const Nav = React.createClass({
 
 	},
 
+	_generateLinks() {
+		return navLinks.map((link, index) => {
+			const { name, path } = link;
+			return (
+				<li key={`navLink${index}`} onClick={this.activeLink}>
+					<Link to={path}>
+						<span className="nav-link">{name}</span>
+					</Link>
+				</li>
+			);
+		});
+	},
+
 	render: function () {
 		return (
 			<div>
@@ -17,16 +32,12 @@ const Nav = React.createClass({
 					<div className="nav-wrapper">
 						<Link to="/">
 							<span className="brand-logo">
-								<img className="tech-logo" src="/app/images/tempLogo2.png"/>
+								<img className="tech-logo" src={getImagePath(logo)}/>
 								<span className="tag-line">a blended marketing company</span>
 							</span>
 						</Link>
 						<ul className="right hide-on-med-and-down">
-							<li onClick={this.activeLink}><Link to="/company"><span className="nav-link">Company</span></Link></li>
-							<li onClick={this.activeLink}><Link to="#"><span className="nav-link">Services</span></Link></li>
-							<li onClick={this.activeLink}><Link to="#"><span className="nav-link">Our Work</span></Link></li>
-							<li onClick={this.activeLink}><Link to="#"><span className="nav-link">Contact</span></Link></li>
-							<li onClick={this.activeLink}><Link to="#"><span className="nav-link">Resources</span></Link></li>
+							{this._generateLinks()}
 						</ul>
 					</div>
 				</nav>

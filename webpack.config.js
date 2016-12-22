@@ -8,6 +8,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var pkg = require('./package.json');
 
+// require('./node_modules/materialize-css/dist/css/materialize.css');
+// require('./node_modules/materialize-css/dist/js/materialize.min.js');
+
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'app');

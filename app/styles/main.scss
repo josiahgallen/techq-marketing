@@ -1,5 +1,5 @@
 @import "../../node_modules/materialize-css/sass/materialize.scss";
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono|Indie+Flower|Open+Sans+Condensed:300');
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
 //#ef5350 red lighten-1
 //#e53935 red darken-1
 //#81d4fa light-blue lighten-3 **********
@@ -13,25 +13,34 @@
 //#f5f5f5 grey lighten-4
 // $darkenBlue: #0277bd;
 
-$baseFont: 'OpenSansCondensed', sans-serif;
-$logoFont: 'Fira Mono', monospace;
-$stylizedFont: 'Indie Flower', cursive;
+$baseFont: 'Reem Kufi', sans-serif;
 $white: #fff;
 $greyText: #616161;
 $logoOrange: #ff9800;
 $logoBlue: #03a9f4;
 $greyBackground: #f5f5f5;
-$logoRed: #FF2101;
+$logoRed: #E2332E;
 $defaultText: #616161;
 
+body {
+	font-family: $baseFont;
+}
+
+#mission-card {
+	margin-top: 20px;
+	font-size: 20px;
+	font-style: italic;
+}
+
 .tech-logo {
-	height: 50px;
+	height: 60px;
 	width: 170px;
 }
 
 .tag-line {
 	font-style: italic;
 	font-size: 20px;
+	margin-left: 20px;
 }
 
 .emphasis-words {
@@ -42,23 +51,35 @@ $defaultText: #616161;
 	font-size: 16px;
 }
 
-.list {
+.centered {
 	text-align: center;
 }
 
 nav {
 	background-color: $white;
 	.brand-logo {
-		font-family: $logoFont;
 		color: $greyText;
+		display: flex;
+		justify-content: center;
 	}
 	.nav-link {
 		color: $greyText;
 	}
 }
 
-.carousel.carousel-slider.initialized {
+.carousel.carousel-slider.initialized,
+.carousel.carousel-slider {
 	height: 600px !important;
+}
+
+.carousel.carousel-slider .carousel-item {
+	width: 100% !important;
+	height: 100% !important;
+	min-height: 400px !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
 }
 
 .carousel-overlay {
@@ -67,21 +88,13 @@ nav {
 	margin: 0;
 }
 
-.succulants-img,
-.granite-img {
-	background-image: url('/app/images/Succulants.jpg');
-	height: inherit;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-.granite-img {
-	background-image: url('/app/images/Granite.jpg');
-}
-
 .info-box {
 	background-color: $greyBackground;
 	padding: 10px;
 	opacity: .75;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
 .row .col {
@@ -89,14 +102,33 @@ nav {
 }
 
 h5.info-box-header {
+	font-size: 20px;
 	text-align: center;
 	margin: 0;
 	font-style: italic;
-	// font-family: $baseFont;
-	// font-family: fantasy;
+	text-transform: uppercase;
+}
+
+h5.section-header {
+	font-size: 20px;
+	text-align: center;
+	margin: 20px 0;
+	color: $logoRed;
 }
 
 #carousel-row-overlay {
 	bottom: 0;
 	margin-bottom: 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.large-copy h5,h6,p,ul{
+	font-size: 25px
+}
+
+.custom-container {
+	margin: 0 40px;
 }

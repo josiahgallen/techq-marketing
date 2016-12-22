@@ -1,8 +1,12 @@
 /* global React */
 
+import { carouselLists } from '../data/copy';
+import CarouselCopy from './carouselCopy';
+
 const CarouselOverlay = React.createClass({
 
     render() {
+        const { two, three, four } = carouselLists;
         return (
             <div id="carousel-row-overlay" className="row carousel-fixed-item">
                 <div className="col s12 m6 l3">
@@ -16,57 +20,25 @@ const CarouselOverlay = React.createClass({
                     </div>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay"></div>
+                    <CarouselCopy/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay info-box">
-                        <h5 className="info-box-header">Experiences</h5>
-                        <p className="blurb list">
-                            <div>Tell your story</div>
-                            <div>Plan your product reveal</div>
-                            <div>Set your company apart</div>
-                            <div>Create meaningful conections</div>
-                            <div>Generate revenue growth</div>
-                            <div className="emphasis-words">Full-time experience, fractional service</div>
-                        </p>
-                    </div>
+                    <CarouselCopy data={three}/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay"></div>
+                    <CarouselCopy/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay"></div>
+                    <CarouselCopy/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay info-box">
-                        <h5 className="info-box-header">Blended Marketing</h5>
-                        <p className="blurb list">
-                            <div>Messaging &amp; content creation</div>
-                            <div>Product launches</div>
-                            <div>Partnership &amp; ecosystems</div>
-                            <div>Sales enablement &amp; training</div>
-                            <div>Pricing</div>
-                            <div>Web strategy</div>
-                            <div>Lead generation</div>
-                            <div>Social media strategy</div>
-                            <div>Market research</div>
-                        </p>
-                    </div>
+                    <CarouselCopy data={two}/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay"></div>
+                    <CarouselCopy/>
                 </div>
                 <div className="col s12 m6 l3">
-                    <div className="carousel-overlay info-box">
-                        <h5 className="info-box-header">Industries</h5>
-                        <p className="blurb list">
-                            <div>Semiconductor</div>
-                            <div>Industrial automation</div>
-                            <div>Connected home</div>
-                            <div>Automotive</div>
-                            <div>Health and fitness</div>
-                        </p>
-                    </div>
+                    <CarouselCopy data={four}/>
                 </div>
             </div>
         )

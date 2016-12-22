@@ -8,6 +8,9 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var pkg = require('./package.json');
 
+// require('./node_modules/materialize-css/dist/css/materialize.css');
+// require('./node_modules/materialize-css/dist/js/materialize.min.js');
+
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'app');
@@ -19,8 +22,8 @@ var precss       = require('precss');
 var common = {
   entry: APP_PATH,
   output: {
-    path: BUILD_PATH,
-    filename: 'bundle.js'
+	path: BUILD_PATH,
+	filename: 'bundle.js'
   },
   module: {
 		loaders: [
@@ -38,7 +41,11 @@ var common = {
 				test: /\.png$/,
 				loader: 'url-loader?limit=8192',
 				include: APP_PATH
-			}
+			},
+			{ test: /\.woff$/, loader: 'url-loader?limit=2500000' },
+			{ test: /\.woff2$/, loader: 'url-loader?limit=1000000' },
+			{ test: /\.eot$/, loader: 'url-loader?limit=1000000' },
+			{ test: /\.ttf/, loader: 'url-loader?limit=1000000' }
 		]
 	},
 	postcss: function () {
@@ -46,7 +53,7 @@ var common = {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			title: 'Test App',
+			title: 'TechQ Marketing',
 			template: path.resolve(APP_PATH, 'index.html'),
 			// favicon: path.resolve(APP_PATH, 'images', 'favicon.ico'),
 			inject: false

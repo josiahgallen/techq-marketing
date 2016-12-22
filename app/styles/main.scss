@@ -1,1 +1,134 @@
 @import "../../node_modules/materialize-css/sass/materialize.scss";
+@import url('https://fonts.googleapis.com/css?family=Reem+Kufi');
+//#ef5350 red lighten-1
+//#e53935 red darken-1
+//#81d4fa light-blue lighten-3 **********
+//#03a9f4 light-blue
+//#828282 battleship grey
+//#424242 grey darken-3
+//#fff white
+//#fff8e1 amber lighten-5
+//#d7ccc8 brown lighten-4
+// #616161 grey darken-2
+//#f5f5f5 grey lighten-4
+// $darkenBlue: #0277bd;
+
+$baseFont: 'Reem Kufi', sans-serif;
+$white: #fff;
+$greyText: #616161;
+$logoOrange: #ff9800;
+$logoBlue: #03a9f4;
+$greyBackground: #f5f5f5;
+$logoRed: #E2332E;
+$defaultText: #616161;
+
+body {
+	font-family: $baseFont;
+}
+
+#mission-card {
+	margin-top: 20px;
+	font-size: 20px;
+	font-style: italic;
+}
+
+.tech-logo {
+	height: 60px;
+	width: 170px;
+}
+
+.tag-line {
+	font-style: italic;
+	font-size: 20px;
+	margin-left: 20px;
+}
+
+.emphasis-words {
+	color: $logoBlue;
+}
+
+.blurb {
+	font-size: 16px;
+}
+
+.centered {
+	text-align: center;
+}
+
+nav {
+	background-color: $white;
+	.brand-logo {
+		color: $greyText;
+		display: flex;
+		justify-content: center;
+	}
+	.nav-link {
+		color: $greyText;
+	}
+}
+
+.carousel.carousel-slider.initialized,
+.carousel.carousel-slider {
+	height: 600px !important;
+}
+
+.carousel.carousel-slider .carousel-item {
+	width: 100% !important;
+	height: 100% !important;
+	min-height: 400px !important;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+}
+
+.carousel-overlay {
+	height: 300px;
+	color: $defaultText;
+	margin: 0;
+}
+
+.info-box {
+	background-color: $greyBackground;
+	padding: 10px;
+	opacity: .75;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.row .col {
+	padding: 0;
+}
+
+h5.info-box-header {
+	font-size: 20px;
+	text-align: center;
+	margin: 0;
+	font-style: italic;
+	text-transform: uppercase;
+}
+
+h5.section-header {
+	font-size: 20px;
+	text-align: center;
+	margin: 20px 0;
+	color: $logoRed;
+}
+
+#carousel-row-overlay {
+	bottom: 0;
+	margin-bottom: 0;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.large-copy h5,h6,p,ul{
+	font-size: 25px
+}
+
+.custom-container {
+	margin: 0 40px;
+}

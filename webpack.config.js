@@ -38,7 +38,7 @@ var common = {
 				include: APP_PATH
 			},
 			{
-				test: /\.png$/,
+				test: /\.(png|jpg)$/,
 				loader: 'url-loader?limit=8192',
 				include: APP_PATH
 			},

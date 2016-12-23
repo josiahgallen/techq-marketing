@@ -9,7 +9,7 @@ const ListTile = React.createClass({
 	render: function () {
 		const { title, list } = this.props;
 		const bullets = list.map((item, index) => {
-			return <li key={index}>{item}</li>;
+			return <li key={`f${index}`}>{item}</li>;
 		});
 		return (
 			<div className="list-tile-bullets">

@@ -7,7 +7,7 @@ const Services = React.createClass({
 	_generateContent() {
 		return Object.keys(servicesPage).map((section, index) => {
 			return (
-				<div key={index}>
+				<div key={`a${index}`}>
 					<div className="card-panel services-section">
 						<span className="white-text"><h6>{section.toUpperCase()}</h6></span>
 					</div>

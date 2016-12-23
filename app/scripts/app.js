@@ -3,6 +3,7 @@
 import { Router, Route, browserHistory } from 'react-router';
 // import { Provider } from 'react-redux';
 import Nav from './components/nav';
+import Footer from './components/footer';
 import Home from './components/home';
 import Company from './components/company';
 import Contact from './components/contact';
@@ -23,6 +24,7 @@ const Container = React.createClass({
 			<div>
 				<Nav/>
 				{this.props.children}
+				<Footer/>
 			</div>
 		);
 	}

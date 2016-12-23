@@ -25,7 +25,14 @@ $defaultText: #616161;
 body {
 	font-family: $baseFont;
 	color: $greyText;
+	// display: flex;
+	// min-height: 100vh;
+	// flex-direction: column;
 }
+
+// footer {
+// 	flex: 1 0 auto;
+// }
 
 #mission-card {
 	margin-top: 20px;

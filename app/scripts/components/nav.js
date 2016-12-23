@@ -16,7 +16,7 @@ const Nav = React.createClass({
 		return navLinks.map((link, index) => {
 			const { name, path } = link;
 			return (
-				<li key={index} onClick={this.activeLink}>
+				<li key={`g${index}`} onClick={this.activeLink}>
 					<Link to={path}>
 						<span className="nav-link">{name}</span>
 					</Link>

@@ -1,9 +1,9 @@
 export const navLinks = [
 	{ name: 'Company', path: '/company' },
-	{ name: 'Services', path: '#' },
-	{ name: 'Our Work', path: '#' },
-	{ name: 'Contact', path: '#' },
-	{ name: 'Resources', path: '#' }
+	{ name: 'Services', path: '/services' }
+	// { name: 'Our Work', path: '#' },
+	// { name: 'Contact', path: '#' },
+	// { name: 'Resources', path: '#' }
 ];
 
 export const logos = {

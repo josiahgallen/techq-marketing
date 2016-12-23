@@ -1,6 +1,6 @@
 /* global React */
 import { Link } from 'react-router';
-import { navLinks, logo } from '../data/copy';
+import { navLinks, logos } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Nav = React.createClass({
@@ -32,7 +32,7 @@ const Nav = React.createClass({
 					<div className="nav-wrapper">
 						<Link to="/">
 							<span className="brand-logo">
-								<img className="tech-logo" src={getImagePath(logo)}/>
+								<img className="tech-logo" src={getImagePath(logos.techQ)}/>
 								<span className="tag-line">a blended marketing company</span>
 							</span>
 						</Link>

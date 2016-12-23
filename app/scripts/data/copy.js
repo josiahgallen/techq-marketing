@@ -2,11 +2,18 @@ export const navLinks = [
 	{ name: 'Company', path: '/company' },
 	{ name: 'Services', path: '#' },
 	{ name: 'Our Work', path: '#' },
-	{ name: 'Contact', path: '/contact' },
+	{ name: 'Contact', path: '#' },
 	{ name: 'Resources', path: '#' }
 ];
 
-export const logo = 'logo-prod.png';
+export const logos = {
+	techQ: 'logo-prod.png',
+	linkedin: 'linkedin-logo.png'
+};
+
+export const externalLinks = {
+	linkedinWennie: 'https://www.linkedin.com/in/wennie-allen'
+};
 
 export const carouselImages = [
 	'asian-girl.jpg',
@@ -89,3 +96,16 @@ export const carouselLists = {
 		]
 	}
 };
+
+export const companyBlurbs = [
+	`techQ Marketing is a blended marketing and business
+	development service company with a mission to help technology companies achieve
+	revenue, profit, and business growth.`,
+	`Based on over 16 years of industry experience, the company is founded on a
+	passion for technology and innovation. The strength of the company lies with
+	the deep understanding of hardware, software, and cloud solutions.
+	The unique experience of the founder in startrup settings brings an
+	understanding for the agility, resourcefulness, and fast-paced demand of any
+	technology company.`,
+	'Want to know more about the founder? Check out her LinkedIn page here:'
+];

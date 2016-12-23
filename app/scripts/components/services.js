@@ -1,12 +1,28 @@
 /* global React */
 
+import { servicesPage } from '../data/copy';
+
 const Services = React.createClass({
+
+	_generateContent() {
+		return Object.keys(servicesPage).map((section, index) => {
+			return (
+				<div key={index}>
+					<div className="card-panel services-section">
+						<span className="white-text"><h6>{section.toUpperCase()}</h6></span>
+					</div>
+					<div className="container">
+						<ul>{servicesPage[section]}</ul>
+					</div>
+				</div>
+			);
+		});
+	},
+
 	render: function () {
 		return (
-			<div>
-				<div className="card-panel second-nav">
-					<span className="white-text"><h2>Services</h2></span>
-				</div>
+			<div className="container">
+				{this._generateContent()}
 			</div>
 		);
 	}

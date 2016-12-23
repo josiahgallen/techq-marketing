@@ -25,14 +25,14 @@ const Home = React.createClass({
 	_getCarouselImages() {
 		return carouselImages.map((img, index) => {
 			const path = getImagePath(img);
-			return <div key={`cb${index}`} className="carousel-item"><img src={path}/></div>;
+			return <div key={index} className="carousel-item"><img src={path}/></div>;
 		});
 	},
 
 	_getCarouselLists() {
 		return Object.keys(listTiles).map((prop, index) => {
 			return (
-				<div key={`lt${index}`} className="col s4">
+				<div key={index} className="col s4">
 					<ListTile title={prop} list={listTiles[prop]}/>
 				</div>
 			);

@@ -49,6 +49,11 @@ body {
 	color: $logoBlue;
 }
 
+.red-emphasis-words {
+	color: $logoRed;
+	font-style: italic;
+}
+
 .blurb {
 	font-size: 16px;
 }
@@ -150,4 +155,13 @@ h4.section-header {
 
 .external-site-logo {
 	height: 50px;
+}
+
+.services-section {
+	background-color: $logoBlue;
+	border-radius: 8px;
+}
+
+.sub-heading {
+	color: $logoBlue;
 }

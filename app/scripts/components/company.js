@@ -7,7 +7,7 @@ const Company = React.createClass({
 
 	_generateBlurbs() {
 		return companyBlurbs.map((blurb, index) => {
-			return <p key={`company${index}`}>{blurb}</p>;
+			return <p key={index}>{blurb}</p>;
 		});
 	},
 

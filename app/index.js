@@ -1,6 +1,7 @@
 import './scripts/globals';
 import app from './scripts/app';
 import Footer from './scripts/components/footer';
+import React from 'react';
 import ReactDOM from 'react-dom';
 // require('../node_modules/materialize-css/dist/css/materialize.css');
 // require('../node_modules/materialize-css/dist/js/materialize.min.js');

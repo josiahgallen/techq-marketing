@@ -1,3 +1,5 @@
+/* global React */
+
 export const navLinks = [
 	{ name: 'Company', path: '/company' },
 	{ name: 'Services', path: '/services' }

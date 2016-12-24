@@ -7,10 +7,11 @@ const Services = React.createClass({
 	_generateContent() {
 		return Object.keys(servicesPage).map((section, index) => {
 			return (
-				<div key={`a${index}`}>
+				<div key={index}>
 					<div className="card-panel services-section">
 						<span className="white-text"><h6>{section.toUpperCase()}</h6></span>
 					</div>
+					{/* <h6 className="services-section">{section.toUpperCase()}</h6> */}
 					<div className="container">
 						<ul>{servicesPage[section]}</ul>
 					</div>
@@ -21,8 +22,13 @@ const Services = React.createClass({
 
 	render: function () {
 		return (
-			<div className="container">
-				{this._generateContent()}
+			<div>
+				<div className="card-panel second-nav">
+					<span className="white-text"><h3>Services</h3></span>
+				</div>
+				<div className="container component-wrapper">
+					{this._generateContent()}
+				</div>
 			</div>
 		);
 	}

@@ -9,7 +9,7 @@ const CarouselOverlay = React.createClass({
 		const { two, three, four } = carouselLists;
 		return (
 			<div id="carousel-row-overlay" className="row carousel-fixed-item">
-				<div className="col s12 m6 l3">
+				<div className="col m12 l3">
 					<div className="carousel-overlay info-box">
 						<h5 className="info-box-header">Our Mission</h5>
 						<p className="blurb">
@@ -19,25 +19,25 @@ const CarouselOverlay = React.createClass({
 						</p>
 					</div>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col l3">
 					<CarouselCopy/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col m12 l3">
 					<CarouselCopy data={three}/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col l3">
 					<CarouselCopy/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col l3">
 					<CarouselCopy/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col m12 l3">
 					<CarouselCopy data={two}/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col l3">
 					<CarouselCopy/>
 				</div>
-				<div className="col s12 m6 l3">
+				<div className="col m12 l3">
 					<CarouselCopy data={four}/>
 				</div>
 			</div>

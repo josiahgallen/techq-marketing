@@ -1,27 +1,23 @@
 /* global React */
 
-import { companyBlurbs, logos, externalLinks } from '../data/copy';
-import { getImagePath } from '../utils';
+import { companyBlurbs } from '../data/copy';
 
 const Company = React.createClass({
 
 	_generateBlurbs() {
 		return companyBlurbs.map((blurb, index) => {
-			return <p key={`c${index}`}>{blurb}</p>;
+			return <p key={index}>{blurb}</p>;
 		});
 	},
 
 	render: function () {
 		return (
-			<div>
+			<div className="component-wrapper">
 				<div className="card-panel second-nav">
-					<span className="white-text"><h2>Company</h2></span>
+					<span className="white-text"><h3>Company</h3></span>
 				</div>
 				<div className="container">
 					{this._generateBlurbs()}
-					<a href={externalLinks.linkedinWennie} target="_blank">
-						<img className="external-site-logo" src={getImagePath(logos.linkedin)}/>
-					</a>
 				</div>
 			</div>
 		);

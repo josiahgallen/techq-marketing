@@ -10,12 +10,12 @@ const CarouselCopy = React.createClass({
 		return section.copy.map((item, index) => {
 			if(item.charAt(0) === '*') {
 				return (
-					<li key={`b${index}`} className="emphasis-words">
+					<li key={index} className="emphasis-words">
 						{item.substring(1)}
 					</li>
 				);
 			} else {
-				return <li key={`b${index}`}>{item}</li>;
+				return <li key={index}>{item}</li>;
 			}
 		});
 	},

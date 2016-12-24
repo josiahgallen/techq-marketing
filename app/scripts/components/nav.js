@@ -1,4 +1,4 @@
-/* global React */
+/* global React, $ */
 import { Link } from 'react-router';
 import { navLinks, logos } from '../data/copy';
 import { getImagePath } from '../utils';
@@ -7,16 +7,20 @@ const Nav = React.createClass({
 
 	activeLink(e) {
 		e.preventDefault();
-		e.target.parentNode.classList.add('active');
-		console.log(1,e.target.parentNode);//eslint-disable-line
-
+		const { nodeName, parentNode } = e.target;
+		$('li').removeClass('active');
+		if(nodeName === 'SPAN') {
+			parentNode.parentNode.classList.add('active');
+		} else if(nodeName === 'A') {
+			parentNode.classList.add('active');
+		}
 	},
 
 	_generateLinks() {
 		return navLinks.map((link, index) => {
 			const { name, path } = link;
 			return (
-				<li key={`g${index}`} onClick={this.activeLink}>
+				<li key={index} onClick={this.activeLink}>
 					<Link to={path}>
 						<span className="nav-link">{name}</span>
 					</Link>

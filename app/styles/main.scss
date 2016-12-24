@@ -6,7 +6,6 @@
 //#03a9f4 light-blue
 //#828282 battleship grey
 //#424242 grey darken-3
-//#fff white
 //#fff8e1 amber lighten-5
 //#d7ccc8 brown lighten-4
 // #616161 grey darken-2
@@ -25,14 +24,18 @@ $defaultText: #616161;
 body {
 	font-family: $baseFont;
 	color: $greyText;
-	// display: flex;
-	// min-height: 100vh;
-	// flex-direction: column;
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
 }
 
-// footer {
-// 	flex: 1 0 auto;
-// }
+#app {
+	flex: 1 0 auto;
+}
+
+footer.page-footer {
+	background-color: $logoBlue;
+}
 
 #mission-card {
 	margin-top: 20px;
@@ -78,6 +81,7 @@ nav {
 	}
 	.nav-link {
 		color: $greyText;
+		font-size: 20px;
 	}
 }
 
@@ -158,6 +162,9 @@ h4.section-header {
 .card-panel.second-nav {
 	margin: 0;
 	background-color: $logoBlue;
+	h3 {
+		margin: 0;
+	}
 }
 
 .external-site-logo {
@@ -165,10 +172,28 @@ h4.section-header {
 }
 
 .services-section {
-	background-color: $logoBlue;
-	border-radius: 8px;
+	background-color: $logoRed;
+	padding: 10px;
+	h6 {
+		margin: 0;
+	}
 }
 
 .sub-heading {
 	color: $logoBlue;
 }
+
+
+
+// @media #{$small-and-down} {
+//   // styles for small screens and down
+// }
+// @media #{$medium-and-up} {
+//   // styles for medium screens and larger
+// }
+// @media #{$medium-and-down} {
+//   // styles for medium screens and down
+// }
+// @media #{$large-and-up} {
+//   // styles for large screens and up
+// }

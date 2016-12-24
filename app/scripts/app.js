@@ -3,11 +3,11 @@
 import { Router, Route, browserHistory } from 'react-router';
 // import { Provider } from 'react-redux';
 import Nav from './components/nav';
-import Footer from './components/footer';
 import Home from './components/home';
 import Company from './components/company';
 import Contact from './components/contact';
 import Services from './components/services';
+import NotFound from './components/notFound';
 require('../../node_modules/materialize-css/dist/css/materialize.css');
 require('../../node_modules/materialize-css/dist/js/materialize.min.js');
 // import store from './redux/store';
@@ -24,7 +24,6 @@ const Container = React.createClass({
 			<div>
 				<Nav/>
 				{this.props.children}
-				<Footer/>
 			</div>
 		);
 	}
@@ -38,6 +37,7 @@ const router = (
 				<Route path="/company" component={Company}/>
 				<Route path="/contact" component={Contact}/>
 				<Route path="/services" component={Services}/>
+				<Route path="/*" component={NotFound}/>
 			</Route>
 		</Router>
 	// </Provider>

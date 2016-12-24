@@ -9,7 +9,6 @@ const Home = React.createClass({
 
 	componentWillMount() {
 		$(document).ready(() => {
-			console.log('runnin');//eslint-disable-line
 			const $carousel = $('.carousel-slider.carousel');
 			$carousel.carousel({ full_width: true });
 			this.changeCarousel = setInterval(() => {
@@ -25,14 +24,14 @@ const Home = React.createClass({
 	_getCarouselImages() {
 		return carouselImages.map((img, index) => {
 			const path = getImagePath(img);
-			return <div key={`d${index}`} className="carousel-item"><img src={path}/></div>;
+			return <div key={index} className="carousel-item"><img src={path}/></div>;
 		});
 	},
 
 	_getCarouselLists() {
 		return Object.keys(listTiles).map((prop, index) => {
 			return (
-				<div key={`e${index}`} className="col s4">
+				<div key={index} className="col s4">
 					<ListTile title={prop} list={listTiles[prop]}/>
 				</div>
 			);
@@ -41,7 +40,7 @@ const Home = React.createClass({
 
 	render() {
 		return (
-			<div>
+			<div className="component-wrapper">
 				<div className="carousel carousel-slider">
 					<CarouselOverlay/>
 					{this._getCarouselImages()}

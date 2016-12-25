@@ -17,10 +17,32 @@ export const externalLinks = {
 	linkedinWennie: 'https://www.linkedin.com/in/wennie-allen'
 };
 
-export const carouselImages = [
-	'asian-girl.jpg',
-	'tablet-coffee.jpg',
-	'circuit-board-wash.jpg'
+export const carouselCopy = [
+	{
+		img: 'tablet-coffee.jpg',
+		copy: [
+			`
+				Helping technology companies achieve revenue, profit, and business
+				growth through blended marketing and business development services
+			`
+		]
+	},
+	{
+		img: 'circuit-board-wash.jpg',
+		copy: [
+			`
+				Tell your story, plan your product reveal, and create meaningful
+				connections to set your company apart
+			`
+		]
+	},
+	{
+		img: 'asian-girl.jpg',
+		copy: [
+			'Passionate about technology and innovation',
+			'Deep understanding of hardware, software, and cloud solutions'
+		]
+	}
 ];
 
 export const listTiles = {
@@ -59,44 +81,6 @@ export const blurbs = {
 	and international teams, techQ provides uparalleled insights
 	and knowledge to the clients. We deliver full-time experience
 	with factional service.`
-};
-
-export const carouselLists = {
-	two: {
-		title: 'BLENDED MARKETING',
-		copy: [
-			'Messaging & content creation',
-			'Product launches',
-			'Partnership & ecosystems',
-			'Sales enablement & training',
-			'Pricing',
-			'Web strategy',
-			'Lead generation',
-			'Social media strategy',
-			'Market research'
-		]
-	},
-	three: {
-		title: 'EXPERIENCES',
-		copy: [
-			'Tell your story',
-			'Plan your product reveal',
-			'Set your company apart',
-			'Create meaningful conections',
-			'Generate revenue growth',
-			'*Full-time experence, fractional service'
-		]
-	},
-	four: {
-		title: 'INDUSTRIES',
-		copy: [
-			'Hardware',
-			'Software & cloud computing',
-			'Commercial & industrial',
-			'Automotive',
-			'Health and fitness'
-		]
-	}
 };
 
 export const companyBlurbs = [

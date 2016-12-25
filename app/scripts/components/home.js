@@ -1,8 +1,7 @@
 /* global React, $ */
 
-import CarouselOverlay from './carouselOverlay';
 import ListTile from './listTile';
-import { listTiles, blurbs, carouselImages } from '../data/copy';
+import { listTiles, blurbs, carouselCopy } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Home = React.createClass({
@@ -21,14 +20,29 @@ const Home = React.createClass({
 		clearInterval(this.changeCarousel);
 	},
 
-	_getCarouselImages() {
-		return carouselImages.map((img, index) => {
-			const path = getImagePath(img);
-			return <div key={index} className="carousel-item"><img src={path}/></div>;
+	_formatCarouselCopy(items) {
+		return items.map((item, index) => {
+			return <li key={index}><h4>{item}</h4></li>
 		});
 	},
 
-	_getCarouselLists() {
+	_getCarouselImages() {
+		return carouselCopy.map((spot, index) => {
+			const { img, copy } = spot;
+			const path = getImagePath(img);
+			return (
+				<div key={index} className="carousel-item" style={{ backgroundImage: `url(${path})` }}>
+					<div className="info-box carousel-overlay">
+						<div className="container">
+							<ul>{this._formatCarouselCopy(copy)}</ul>
+						</div>
+					</div>
+				</div>
+			);
+		});
+	},
+
+	_getHomeBodyLists() {
 		return Object.keys(listTiles).map((prop, index) => {
 			return (
 				<div key={index} className="col s4">
@@ -42,7 +56,6 @@ const Home = React.createClass({
 		return (
 			<div className="component-wrapper">
 				<div className="carousel carousel-slider">
-					<CarouselOverlay/>
 					{this._getCarouselImages()}
 				</div>
 				<div className="custom-container">
@@ -52,7 +65,7 @@ const Home = React.createClass({
 							{blurbs.one}
 						</p>
 						<div className="container">
-							{this._getCarouselLists()}
+							{this._getHomeBodyLists()}
 						</div>
 						<p className="col s12">
 							{blurbs.two}

@@ -5,10 +5,15 @@ import { getImagePath } from '../utils';
 
 const Nav = React.createClass({
 
+	clearActiveLink() {
+		// e.preventDefault();
+		$('li').removeClass('active');
+	},
+
 	activeLink(e) {
 		e.preventDefault();
 		const { nodeName, parentNode } = e.target;
-		$('li').removeClass('active');
+		this.clearActiveLink();
 		if(nodeName === 'SPAN') {
 			parentNode.parentNode.classList.add('active');
 		} else if(nodeName === 'A') {
@@ -35,7 +40,7 @@ const Nav = React.createClass({
 				<nav>
 					<div className="nav-wrapper">
 						<Link to="/">
-							<span className="brand-logo">
+							<span className="brand-logo" onClick={this.clearActiveLink}>
 								<img className="tech-logo" src={getImagePath(logos.techQ)}/>
 								<span className="tag-line">a blended marketing company</span>
 							</span>

@@ -3,13 +3,6 @@
 import { companyBlurbs } from '../data/copy';
 
 const Company = React.createClass({
-
-	_generateBlurbs() {
-		return companyBlurbs.map((blurb, index) => {
-			return <p key={index}>{blurb}</p>;
-		});
-	},
-
 	render: function () {
 		return (
 			<div className="component-wrapper">
@@ -17,7 +10,9 @@ const Company = React.createClass({
 					<span className="white-text"><h3>Company</h3></span>
 				</div>
 				<div className="container">
-					{this._generateBlurbs()}
+					<div className="company-copy-wrapper">
+						{companyBlurbs}
+					</div>
 				</div>
 			</div>
 		);

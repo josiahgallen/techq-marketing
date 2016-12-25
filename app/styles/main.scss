@@ -51,6 +51,13 @@ footer.page-footer {
 
 .red-emphasis-words {
 	color: $logoRed;
+}
+
+.blue-emphasis-words {
+	color: $logoBlue;
+}
+
+.italic {
 	font-style: italic;
 }
 
@@ -110,7 +117,7 @@ h3.section-header {
 }
 
 .large-copy h5,h6,p,ul{
-	font-size: 24px
+	font-size: 22px
 }
 
 .custom-container {
@@ -151,6 +158,10 @@ h3.section-header {
 
 .bottom-home-page {
 	margin-bottom: 80px;
+}
+
+.company-copy-wrapper {
+	margin: 80px 0;
 }
 
 

@@ -6,7 +6,6 @@ import { getImagePath } from '../utils';
 const Nav = React.createClass({
 
 	clearActiveLink() {
-		// e.preventDefault();
 		$('li').removeClass('active');
 	},
 

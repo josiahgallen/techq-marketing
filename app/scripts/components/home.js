@@ -22,19 +22,21 @@ const Home = React.createClass({
 
 	_formatCarouselCopy(items) {
 		return items.map((item, index) => {
-			return <li key={index}><h4>{item}</h4></li>;
+			return <li key={index}><h1>{item}</h1></li>;
 		});
 	},
 
 	_getCarouselImages() {
 		return carouselCopy.map((spot, index) => {
-			const { img, copy } = spot;
+			const { img, copy, color } = spot;
 			const path = getImagePath(img);
 			return (
 				<div key={index} className="carousel-item" style={{ backgroundImage: `url(${path})` }}>
 					<div className="info-box carousel-overlay">
-						<div className="container">
-							<ul>{this._formatCarouselCopy(copy)}</ul>
+						<div className="row">
+							<div className="col s10 offset-s1">
+								<ul>{this._formatCarouselCopy(copy)}</ul>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -60,14 +62,14 @@ const Home = React.createClass({
 				</div>
 				<div className="custom-container">
 					<div className="row large-copy">
-						<h4 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h4>
+						<h3 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h3>
 						<p className="col s12">
 							{blurbs.one}
 						</p>
 						<div className="container">
 							{this._getHomeBodyLists()}
 						</div>
-						<p className="col s12">
+						<p className="col s12 bottom-home-page">
 							{blurbs.two}
 						</p>
 					</div>

@@ -28,7 +28,7 @@ const Home = React.createClass({
 
 	_getCarouselImages() {
 		return carouselCopy.map((spot, index) => {
-			const { img, copy, color } = spot;
+			const { img, copy } = spot;
 			const path = getImagePath(img);
 			return (
 				<div key={index} className="carousel-item" style={{ backgroundImage: `url(${path})` }}>

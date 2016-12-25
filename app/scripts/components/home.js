@@ -22,7 +22,7 @@ const Home = React.createClass({
 
 	_formatCarouselCopy(items) {
 		return items.map((item, index) => {
-			return <li key={index}><h4>{item}</h4></li>
+			return <li key={index}><h4>{item}</h4></li>;
 		});
 	},
 

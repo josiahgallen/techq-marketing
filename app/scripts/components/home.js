@@ -1,15 +1,13 @@
 /* global React, $ */
 
-import CarouselOverlay from './carouselOverlay';
 import ListTile from './listTile';
-import { listTiles, blurbs, carouselImages } from '../data/copy';
+import { listTiles, blurbs, carouselCopy } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Home = React.createClass({
 
 	componentWillMount() {
 		$(document).ready(() => {
-			console.log('runnin');//eslint-disable-line
 			const $carousel = $('.carousel-slider.carousel');
 			$carousel.carousel({ full_width: true });
 			this.changeCarousel = setInterval(() => {
@@ -22,17 +20,32 @@ const Home = React.createClass({
 		clearInterval(this.changeCarousel);
 	},
 
-	_getCarouselImages() {
-		return carouselImages.map((img, index) => {
-			const path = getImagePath(img);
-			return <div key={`cb${index}`} className="carousel-item"><img src={path}/></div>;
+	_formatCarouselCopy(items) {
+		return items.map((item, index) => {
+			return <li key={index}><h4>{item}</h4></li>;
 		});
 	},
 
-	_getCarouselLists() {
+	_getCarouselImages() {
+		return carouselCopy.map((spot, index) => {
+			const { img, copy } = spot;
+			const path = getImagePath(img);
+			return (
+				<div key={index} className="carousel-item" style={{ backgroundImage: `url(${path})` }}>
+					<div className="info-box carousel-overlay">
+						<div className="container">
+							<ul>{this._formatCarouselCopy(copy)}</ul>
+						</div>
+					</div>
+				</div>
+			);
+		});
+	},
+
+	_getHomeBodyLists() {
 		return Object.keys(listTiles).map((prop, index) => {
 			return (
-				<div key={`lt${index}`} className="col s4">
+				<div key={index} className="col s4">
 					<ListTile title={prop} list={listTiles[prop]}/>
 				</div>
 			);
@@ -41,18 +54,19 @@ const Home = React.createClass({
 
 	render() {
 		return (
-			<div>
+			<div className="component-wrapper">
 				<div className="carousel carousel-slider">
-					<CarouselOverlay/>
 					{this._getCarouselImages()}
 				</div>
 				<div className="custom-container">
 					<div className="row large-copy">
-						<h5 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h5>
+						<h4 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h4>
 						<p className="col s12">
 							{blurbs.one}
 						</p>
-						{this._getCarouselLists()}
+						<div className="container">
+							{this._getHomeBodyLists()}
+						</div>
 						<p className="col s12">
 							{blurbs.two}
 						</p>

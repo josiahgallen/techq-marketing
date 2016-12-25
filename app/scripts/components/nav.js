@@ -1,22 +1,31 @@
-/* global React */
+/* global React, $ */
 import { Link } from 'react-router';
-import { navLinks, logo } from '../data/copy';
+import { navLinks, logos } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Nav = React.createClass({
 
+	clearActiveLink() {
+		// e.preventDefault();
+		$('li').removeClass('active');
+	},
+
 	activeLink(e) {
 		e.preventDefault();
-		e.target.parentNode.classList.add('active');
-		console.log(1,e.target.parentNode);//eslint-disable-line
-
+		const { nodeName, parentNode } = e.target;
+		this.clearActiveLink();
+		if(nodeName === 'SPAN') {
+			parentNode.parentNode.classList.add('active');
+		} else if(nodeName === 'A') {
+			parentNode.classList.add('active');
+		}
 	},
 
 	_generateLinks() {
 		return navLinks.map((link, index) => {
 			const { name, path } = link;
 			return (
-				<li key={`navLink${index}`} onClick={this.activeLink}>
+				<li key={index} onClick={this.activeLink}>
 					<Link to={path}>
 						<span className="nav-link">{name}</span>
 					</Link>
@@ -31,8 +40,8 @@ const Nav = React.createClass({
 				<nav>
 					<div className="nav-wrapper">
 						<Link to="/">
-							<span className="brand-logo">
-								<img className="tech-logo" src={getImagePath(logo)}/>
+							<span className="brand-logo" onClick={this.clearActiveLink}>
+								<img className="tech-logo" src={getImagePath(logos.techQ)}/>
 								<span className="tag-line">a blended marketing company</span>
 							</span>
 						</Link>

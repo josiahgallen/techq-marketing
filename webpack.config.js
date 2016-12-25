@@ -38,7 +38,7 @@ var common = {
 				include: APP_PATH
 			},
 			{
-				test: /\.png$/,
+				test: /\.(png|jpg|ico)$/,
 				loader: 'url-loader?limit=8192',
 				include: APP_PATH
 			},
@@ -55,7 +55,7 @@ var common = {
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
 			template: path.resolve(APP_PATH, 'index.html'),
-			// favicon: path.resolve(APP_PATH, 'images', 'favicon.ico'),
+			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
 		})
 	]

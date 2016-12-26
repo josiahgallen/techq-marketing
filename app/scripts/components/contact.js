@@ -1,4 +1,4 @@
-/* global React, Firbase */
+/* global React */
 
 import { Link } from 'react-router';
 import { saveContactInfo } from '../../db';
@@ -9,7 +9,7 @@ const Contact = React.createClass({
 		return {
 			sent: false,
 			first_name: ''
-		}
+		};
 	},
 
 	onSubmit(e) {
@@ -79,7 +79,7 @@ const Contact = React.createClass({
 				<h1>{`Thanks for reaching out ${this.state.first_name}. You will be hearing from us soon.`}</h1>
 				<Link to="/"><span className="submit-form waves-effect waves-light btn">Home</span></Link>
 			</div>
-		)
+		);
 	},
 
 	render: function () {

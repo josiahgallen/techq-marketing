@@ -7,14 +7,14 @@ export function init() {
 
 // const database = Firebase.database();
 export function saveContactInfo(fName, lName, email, number, company, message) {
-    const today = new Date();
+	const today = new Date();
 	Firebase.database().ref(`contacts/${today.toDateString()}/${lName}, ${fName} `).set({
 		fName,
 		lName,
-        email,
-        number,
+		email,
+		number,
 		company,
-        message,
-        dateSubmitted: today.toString()
+		message,
+		dateSubmitted: today.toString()
 	});
 }

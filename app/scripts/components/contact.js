@@ -1,45 +1,99 @@
-/* global React */
+/* global React, Firbase */
+
+import { Link } from 'react-router';
+import { saveContactInfo } from '../../db';
+
 const Contact = React.createClass({
 
+	getInitialState() {
+		return {
+			sent: false,
+			first_name: ''
+		}
+	},
+
 	onSubmit(e) {
-		console.log('sent', e);//eslint-disable-line
+		e.preventDefault();
+		const { first_name, last_name, email, phone, company, message } = this.refs;
+		saveContactInfo(
+			first_name.value,
+			last_name.value,
+			email.value,
+			phone.value,
+			company.value,
+			message.value
+		);
+		this.setState({ sent: true, first_name: first_name.value });
+	},
+
+	onCancel() {
+		Object.keys(this.refs).forEach(ref => {
+			this.refs[ref].value = '';
+		});
+	},
+
+	getForm() {
+		return (
+			<form className="col s12"onSubmit={this.onSubmit}>
+				<div className="row">
+					<div className="input-field col s6">
+						<input id="fName" ref="first_name" type="text" required/>
+						<label htmlFor="first_name">First Name</label>
+					</div>
+					<div className="input-field col s6">
+						<input id="last_name" ref="last_name" type="text" required/>
+						<label htmlFor="lName">Last Name</label>
+					</div>
+				</div>
+				<div className="row">
+					<div className="input-field col s6">
+						<input id="email" ref="email" type="email" required className="validate"/>
+						<label htmlFor="email" data-error="Please enter a valid email">Email</label>
+					</div>
+					<div className="input-field col s6">
+						<input id="phone" ref="phone" type="tel"/>
+						<label htmlFor="phone">Phone (optional)</label>
+					</div>
+				</div>
+				<div className="row">
+					<div className="input-field col s12">
+						<input id="company-rep" ref="company" type="text"/>
+						<label htmlFor="company-rep">Company (optional)</label>
+					</div>
+				</div>
+				<div className="row">
+					<div className="input-field col s12">
+						<textarea id="message" ref="message" className="materialize-textarea"/>
+						<label htmlFor="message">Message (optional)</label>
+					</div>
+				</div>
+				<button className="submit-form btn waves-effect waves-light" type="submit" name="action">Submit</button>
+				<a className="cancel-button waves-effect waves-light btn" onClick={this.onCancel}>Cancel</a>
+			</form>
+		);
+	},
+
+	getSentMessage() {
+		return (
+			<div>
+				<h1>{`Thanks for reaching out ${this.state.first_name}. You will be hearing from us soon.`}</h1>
+				<Link to="/"><span className="submit-form waves-effect waves-light btn">Home</span></Link>
+			</div>
+		)
 	},
 
 	render: function () {
 		return (
-			<div className="container">
-				<h1>Contact us</h1>
-				<div className="row">
-					<form
-						className="col s12"
-						onSubmit={this.onSubmit}
-						method="POST"
-						action="https://script.google.com/macros/s/AKfycbwgEGrQutGsYaiGQoTtk7AkfZ3VAgOOZDzhLGn8oVTjyXw7wy0/exec"
-					>
+			<div className="component-wrapper">
+				<div className="card-panel second-nav">
+					<span className="white-text"><h3>Contact us</h3></span>
+				</div>
+				<div className="container">
+					<div className="company-copy-wrapper">
 						<div className="row">
-							<div className="input-field col s6">
-								<input id="first_name" type="text" className="validate"/>
-								<label htmlFor="first_name">First Name</label>
-							</div>
-							<div className="input-field col s6">
-								<input id="last_name" type="text" className="validate"/>
-								<label htmlFor="last_name">Last Name</label>
-							</div>
+							{this.state.sent ? this.getSentMessage(): this.getForm()}
 						</div>
-						<div className="row">
-							<div className="input-field col s12">
-								<input id="email" type="email" className="validate"/>
-								<label htmlFor="email">Email</label>
-							</div>
-						</div>
-						<div className="row">
-							<div className="input-field col s12">
-								<textarea id="msg" className="materialize-textarea"/>
-								<label htmlFor="msg">Message</label>
-							</div>
-						</div>
-						<button type="submit">send</button>
-					</form>
+					</div>
 				</div>
 			</div>
 		);

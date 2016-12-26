@@ -2,9 +2,9 @@
 
 export const navLinks = [
 	{ name: 'Company', path: '/company' },
-	{ name: 'Services', path: '/services' }
+	{ name: 'Services', path: '/services' },
 	// { name: 'Our Work', path: '#' },
-	// { name: 'Contact', path: '#' },
+	{ name: 'Contact', path: '/contact' }
 	// { name: 'Resources', path: '#' }
 ];
 

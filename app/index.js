@@ -1,10 +1,23 @@
+/* global Firebase */
+
 import './scripts/globals';
 import app from './scripts/app';
 import Footer from './scripts/components/footer';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { init as initDB } from './db';
 // require('../node_modules/materialize-css/dist/css/materialize.css');
 // require('../node_modules/materialize-css/dist/js/materialize.min.js');
+
+var config = {
+	apiKey: "AIzaSyBQIeXmFpDv6NoE2oQ7DVoY_w5nHtnTBt0",
+	authDomain: "techqmarketing-2e708.firebaseapp.com",
+	databaseURL: "https://techqmarketing-2e708.firebaseio.com",
+	storageBucket: "techqmarketing-2e708.appspot.com",
+	messagingSenderId: "698872446992"
+};
+Firebase.initializeApp(config);
+initDB();
 
 //Gathering .scss files from scripts and styles folders
 const baseStyles = require.context('./styles', true, /\.scss$/);

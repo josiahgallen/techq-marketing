@@ -52,7 +52,7 @@ var common = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
-			template: 'index.html',
+			template: path.resolve(APP_PATH, 'index.html'),
 			filename: '200.html',
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false

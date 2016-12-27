@@ -34,6 +34,7 @@ const Nav = React.createClass({
 	},
 
 	render: function () {
+		const links = this._generateLinks();
 		return (
 			<div>
 				<nav>
@@ -46,10 +47,11 @@ const Nav = React.createClass({
 						</Link>
 						<a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 						<ul className="right hide-on-med-and-down">
-							{this._generateLinks()}
+							{links}
 						</ul>
 						<ul className="side-nav" id="mobile-demo">
-							{this._generateLinks()}
+							<Link to="/"><span className="nav-link">Home</span></Link>
+							{links}
 						</ul>
 					</div>
 				</nav>

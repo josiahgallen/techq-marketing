@@ -208,9 +208,7 @@ i.material-icons {
 		height: 47px;
 	}
 }
-// @media #{$medium-and-up} {
-//   // styles for medium screens and larger
-// }
+
 @media #{$medium-and-down} {
 	.carousel-copy,
 	.section-header {
@@ -230,6 +228,3 @@ i.material-icons {
 		font-size: 18px;
 	}
 }
-// @media #{$large-and-up} {
-//   // styles for large screens and up
-// }

@@ -64,7 +64,7 @@ var common = {
 			Hammer: "hammerjs/hammer"
 		}),
         new CopyWebpackPlugin([
-            { from: 'CNAME', to: 'CNAME' }
+            { from: 'CNAME' }
         ])
 	]
 };

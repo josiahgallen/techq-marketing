@@ -8,7 +8,7 @@ const Home = React.createClass({
 
 	_formatCarouselCopy(items) {
 		return items.map((item, index) => {
-			return <li key={index}><h1>{item}</h1></li>;
+			return <li key={index}><h1 className="carousel-copy">{item}</h1></li>;
 		});
 	},
 
@@ -33,7 +33,7 @@ const Home = React.createClass({
 	_getHomeBodyLists() {
 		return Object.keys(listTiles).map((prop, index) => {
 			return (
-				<div key={index} className="col s4">
+				<div key={index} className="col s12 m4">
 					<ListTile title={prop} list={listTiles[prop]}/>
 				</div>
 			);

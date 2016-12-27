@@ -81,7 +81,7 @@ nav {
 .carousel.carousel-slider .carousel-item {
 	width: 100% !important;
 	height: 100% !important;
-	min-height: 400px !important;
+	min-height: 300px !important;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -116,7 +116,7 @@ h3.section-header {
 }
 
 .large-copy h5,h6,p,ul{
-	font-size: 22px
+	font-size: 22px;
 }
 
 .custom-container {
@@ -207,17 +207,29 @@ i.material-icons {
 	.tech-logo {
 		height: 47px;
 	}
-
-	// .tag-line {
-	// 	display: none;
-	// }
 }
 // @media #{$medium-and-up} {
 //   // styles for medium screens and larger
 // }
-// @media #{$medium-and-down} {
-//   // styles for medium screens and down
-// }
+@media #{$medium-and-down} {
+	.carousel-copy,
+	.section-header {
+		font-size: 28px;
+	}
+
+	.carousel.carousel-slider.initialized,
+	.carousel.carousel-slider {
+		height: 300px !important;
+	}
+
+	.carousel-overlay {
+		height: 300px;
+	}
+
+	.large-copy h5,h6,p,ul{
+		font-size: 18px;
+	}
+}
 // @media #{$large-and-up} {
 //   // styles for large screens and up
 // }

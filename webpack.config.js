@@ -8,9 +8,6 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var pkg = require('./package.json');
 
-// require('./node_modules/materialize-css/dist/css/materialize.css');
-// require('./node_modules/materialize-css/dist/js/materialize.min.js');
-
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
 var APP_PATH = path.resolve(ROOT_PATH, 'app');
@@ -57,7 +54,13 @@ var common = {
 			template: path.resolve(APP_PATH, 'index.html'),
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
-		})
+		}),
+        new webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery",
+            "window.jQuery": "jquery",
+            Hammer: "hammerjs/hammer"
+        })
 	]
 };
 

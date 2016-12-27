@@ -196,11 +196,22 @@ a.cancel-button:hover {
 	color: $white;
 }
 
+i.material-icons {
+	color: $logoRed;
+	cursor: pointer;
+}
 
 
-// @media #{$small-and-down} {
-//   // styles for small screens and down
-// }
+
+@media #{$small-and-down} {
+	.tech-logo {
+		height: 47px;
+	}
+
+	// .tag-line {
+	// 	display: none;
+	// }
+}
 // @media #{$medium-and-up} {
 //   // styles for medium screens and larger
 // }

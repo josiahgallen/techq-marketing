@@ -1,24 +1,10 @@
-/* global React, $ */
+/* global React */
 
 import ListTile from './listTile';
 import { listTiles, blurbs, carouselCopy } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Home = React.createClass({
-
-	componentWillMount() {
-		$(document).ready(() => {
-			const $carousel = $('.carousel-slider.carousel');
-			$carousel.carousel({ full_width: true });
-			this.changeCarousel = setInterval(() => {
-				$carousel.carousel('next');
-			}, 10000);
-		});
-	},
-
-	componentWillUnmount() {
-		clearInterval(this.changeCarousel);
-	},
 
 	_formatCarouselCopy(items) {
 		return items.map((item, index) => {

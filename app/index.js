@@ -6,8 +6,6 @@ import Footer from './scripts/components/footer';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { init as initDB } from './db';
-// require('../node_modules/materialize-css/dist/css/materialize.css');
-// require('../node_modules/materialize-css/dist/js/materialize.min.js');
 
 const config = {
 	apiKey: 'AIzaSyBQIeXmFpDv6NoE2oQ7DVoY_w5nHtnTBt0',

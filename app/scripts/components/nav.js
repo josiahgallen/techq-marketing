@@ -41,10 +41,14 @@ const Nav = React.createClass({
 						<Link to="/">
 							<span className="brand-logo" onClick={this.clearActiveLink}>
 								<img className="tech-logo" src={getImagePath(logos.techQ)}/>
-								<span className="tag-line">a blended marketing company</span>
+								<span className="tag-line hide-on-small-and-down">a blended marketing company</span>
 							</span>
 						</Link>
+						<a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 						<ul className="right hide-on-med-and-down">
+							{this._generateLinks()}
+						</ul>
+						<ul className="side-nav" id="mobile-demo">
 							{this._generateLinks()}
 						</ul>
 					</div>

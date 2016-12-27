@@ -90,6 +90,7 @@ if (TARGET === 'start' || !TARGET) {
 };
 
 if (TARGET === 'build' || TARGET === 'stats') {
+    console.log(1, APP_PATH, 2, BUILD_PATH);
 	module.exports = merge(common, {
 		entry: {
 			app: APP_PATH,
@@ -112,6 +113,12 @@ if (TARGET === 'build' || TARGET === 'stats') {
 		},
 		plugins: [
 			new Clean(['dist']),
+            new HtmlWebpackPlugin({
+    			title: 'TechQ Marketing',
+    			template: '200.html',
+    			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
+    			inject: false
+    		}),
 			new ExtractTextPlugin('styles.[chunkhash].css'),
 			new webpack.optimize.CommonsChunkPlugin(
 				'vendor',

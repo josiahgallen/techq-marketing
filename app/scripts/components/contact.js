@@ -15,14 +15,7 @@ const Contact = React.createClass({
 	onSubmit(e) {
 		e.preventDefault();
 		const { first_name, last_name, email, phone, company, message } = this.refs;
-		saveContactInfo(
-			first_name.value,
-			last_name.value,
-			email.value,
-			phone.value,
-			company.value,
-			message.value
-		);
+		saveContactInfo(first_name.value, last_name.value, email.value, phone.value, company.value, message.value);
 		this.setState({ sent: true, first_name: first_name.value });
 	},
 
@@ -37,15 +30,13 @@ const Contact = React.createClass({
 			<form className="col s12"onSubmit={this.onSubmit}>
 				<div className="row">
 					<div className="input-field col s6">
-						<input id="fName" ref="first_name" type="text" required/>
+						<input id="first_name" ref="first_name" type="text" required/>
 						<label htmlFor="first_name">First Name</label>
 					</div>
 					<div className="input-field col s6">
 						<input id="last_name" ref="last_name" type="text" required/>
 						<label htmlFor="lName">Last Name</label>
 					</div>
-				</div>
-				<div className="row">
 					<div className="input-field col s6">
 						<input id="email" ref="email" type="email" required className="validate"/>
 						<label htmlFor="email" data-error="Please enter a valid email">Email</label>
@@ -54,14 +45,10 @@ const Contact = React.createClass({
 						<input id="phone" ref="phone" type="tel"/>
 						<label htmlFor="phone">Phone (optional)</label>
 					</div>
-				</div>
-				<div className="row">
 					<div className="input-field col s12">
 						<input id="company-rep" ref="company" type="text"/>
 						<label htmlFor="company-rep">Company (optional)</label>
 					</div>
-				</div>
-				<div className="row">
 					<div className="input-field col s12">
 						<textarea id="message" ref="message" className="materialize-textarea"/>
 						<label htmlFor="message">Message (optional)</label>
@@ -91,7 +78,7 @@ const Contact = React.createClass({
 				<div className="container">
 					<div className="company-copy-wrapper">
 						<div className="row">
-							{this.state.sent ? this.getSentMessage(): this.getForm()}
+							{this.state.sent ? this.getSentMessage() : this.getForm()}
 						</div>
 					</div>
 				</div>

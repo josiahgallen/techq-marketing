@@ -51,7 +51,8 @@ var common = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
-			template: '200.html',
+			template: 'index.html',
+            filename: '200.html',
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
 		}),
@@ -113,12 +114,6 @@ if (TARGET === 'build' || TARGET === 'stats') {
 		},
 		plugins: [
 			new Clean(['dist']),
-            new HtmlWebpackPlugin({
-    			title: 'TechQ Marketing',
-    			template: '200.html',
-    			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
-    			inject: false
-    		}),
 			new ExtractTextPlugin('styles.[chunkhash].css'),
 			new webpack.optimize.CommonsChunkPlugin(
 				'vendor',

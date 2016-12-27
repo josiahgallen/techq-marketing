@@ -91,7 +91,6 @@ if (TARGET === 'start' || !TARGET) {
 };
 
 if (TARGET === 'build' || TARGET === 'stats') {
-    console.log(1, APP_PATH, 2, BUILD_PATH);
 	module.exports = merge(common, {
 		entry: {
 			app: APP_PATH,

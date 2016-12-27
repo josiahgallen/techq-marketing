@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var merge = require('webpack-merge');
 var Clean = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
@@ -52,16 +53,19 @@ var common = {
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
 			template: 'index.html',
-            filename: '200.html',
+			filename: '200.html',
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
 		}),
-        new webpack.ProvidePlugin({
-            $: "jquery",
-            jQuery: "jquery",
-            "window.jQuery": "jquery",
-            Hammer: "hammerjs/hammer"
-        })
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery",
+			Hammer: "hammerjs/hammer"
+		}),
+        new CopyWebpackPlugin([
+            { from: 'CNAME', to: 'CNAME' }
+        ])
 	]
 };
 

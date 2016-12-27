@@ -1,6 +1,6 @@
 {
   "name": "techq-marketing",
-  "version": "0.0.10",
+  "version": "0.0.25",
   "description": "Marketing webpage",
   "repository": {
     "type": "git",
@@ -28,6 +28,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.7.2",
     "clean-webpack-plugin": "^0.1.9",
+    "copy-webpack-plugin": "^4.0.1",
     "css-loader": "^0.23.1",
     "enzyme": "^2.2.0",
     "eslint": "^2.9.0",
@@ -36,6 +37,7 @@
     "expect": "^1.18.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "firebase": "^3.6.4",
     "html-webpack-plugin": "^2.16.0",
     "jsdom": "^8.5.0",
     "mocha": "^2.4.5",

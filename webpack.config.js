@@ -3,13 +3,11 @@ var webpack = require('webpack');
 var merge = require('webpack-merge');
 var Clean = require('clean-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var pkg = require('./package.json');
-
-// require('./node_modules/materialize-css/dist/css/materialize.css');
-// require('./node_modules/materialize-css/dist/js/materialize.min.js');
 
 var TARGET = process.env.npm_lifecycle_event;
 var ROOT_PATH = path.resolve(__dirname);
@@ -55,9 +53,19 @@ var common = {
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
 			template: path.resolve(APP_PATH, 'index.html'),
+			filename: '200.html',
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
-		})
+		}),
+		new webpack.ProvidePlugin({
+			$: "jquery",
+			jQuery: "jquery",
+			"window.jQuery": "jquery",
+			Hammer: "hammerjs/hammer"
+		}),
+        new CopyWebpackPlugin([
+            { from: 'CNAME' }
+        ])
 	]
 };
 

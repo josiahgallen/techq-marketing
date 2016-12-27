@@ -1,4 +1,4 @@
-/* global React */
+/* global React, $ */
 
 import { Router, Route, browserHistory } from 'react-router';
 // import { Provider } from 'react-redux';
@@ -17,6 +17,22 @@ const Container = React.createClass({
 
 	propTypes: {
 		children: React.PropTypes.object
+	},
+
+	componentWillMount() {
+		$(document).ready(() => {
+			const $carousel = $('.carousel-slider.carousel');
+			$('.button-collapse').sideNav();
+			// $('.dropdown-button').dropdown();
+			$carousel.carousel({ full_width: true });
+			this.changeCarousel = setInterval(() => {
+				$carousel.carousel('next');
+			}, 10000);
+		});
+	},
+
+	componentWillUnmount() {
+		clearInterval(this.changeCarousel);
 	},
 
 	render: function () {

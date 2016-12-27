@@ -6,16 +6,12 @@
 //#03a9f4 light-blue
 //#828282 battleship grey
 //#424242 grey darken-3
-//#fff8e1 amber lighten-5
-//#d7ccc8 brown lighten-4
 // #616161 grey darken-2
 //#f5f5f5 grey lighten-4
 // $darkenBlue: #0277bd;
 
 $baseFont: 'Reem Kufi', sans-serif;
 $white: #fff;
-$greyText: #616161;
-$logoOrange: #ff9800;
 $logoBlue: #34A6C1;
 $greyBackground: #f5f5f5;
 $logoRed: #E2332E;
@@ -23,7 +19,7 @@ $defaultText: #616161;
 
 body {
 	font-family: $baseFont;
-	color: $greyText;
+	color: $defaultText;
 	display: flex;
 	min-height: 100vh;
 	flex-direction: column;
@@ -35,12 +31,9 @@ body {
 
 footer.page-footer {
 	background-color: $logoBlue;
-}
-
-#mission-card {
-	margin-top: 20px;
-	font-size: 20px;
-	font-style: italic;
+	p {
+		font-size: 18px;
+	}
 }
 
 .tech-logo {
@@ -55,32 +48,27 @@ footer.page-footer {
 	margin-left: 20px;
 }
 
-.emphasis-words {
+.red-emphasis-words {
+	color: $logoRed;
+}
+
+.blue-emphasis-words {
 	color: $logoBlue;
 }
 
-.red-emphasis-words {
-	color: $logoRed;
+.italic {
 	font-style: italic;
-}
-
-.blurb {
-	font-size: 16px;
-}
-
-.centered {
-	text-align: center;
 }
 
 nav {
 	background-color: $white;
 	.brand-logo {
-		color: $greyText;
+		color: $defaultText;
 		display: flex;
 		justify-content: center;
 	}
 	.nav-link {
-		color: $greyText;
+		color: $defaultText;
 		font-size: 20px;
 	}
 }
@@ -93,7 +81,7 @@ nav {
 .carousel.carousel-slider .carousel-item {
 	width: 100% !important;
 	height: 100% !important;
-	min-height: 400px !important;
+	min-height: 300px !important;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -108,49 +96,27 @@ nav {
 }
 
 .info-box {
-	background-color: rgba(245, 245, 245, 0.4);//$greyBackground;
+	background-color: rgba(245, 245, 245, 0.5);
 	padding: 10px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	text-align: center;
-	h4 {
-		color: $logoBlue;
+	h1 {
+		color: $white;
 		line-height: 1.5;
 		text-shadow: 1px 1px 2px black;
 	}
 }
 
-.row .col {
-	padding: 0;
-}
-
-h5.info-box-header {
-	font-size: 20px;
+h3.section-header {
 	text-align: center;
-	margin: 0;
-	font-style: italic;
-	text-transform: uppercase;
-}
-
-h4.section-header {
-	font-size: 26px;
-	text-align: center;
-	margin: 20px 0;
+	margin: 80px 0 20px 0;
 	color: $logoRed;
 }
 
-#carousel-row-overlay {
-	bottom: 0;
-	margin-bottom: 0;
-}
-
-.bold {
-	font-weight: bold;
-}
-
 .large-copy h5,h6,p,ul{
-	font-size: 18px
+	font-size: 22px;
 }
 
 .custom-container {
@@ -161,7 +127,7 @@ h4.section-header {
 	text-align: center;
 	color: $logoBlue;
 	h6 {
-		color: $greyText;
+		color: $defaultText;
 	}
 }
 
@@ -189,17 +155,76 @@ h4.section-header {
 	color: $logoBlue;
 }
 
+.bottom-home-page {
+	margin-bottom: 80px;
+}
+
+.company-copy-wrapper {
+	margin: 80px 0;
+}
+
+.input-field input[type=text]:focus,
+.input-field input[type=tel]:focus,
+.input-field input[type=email]:focus,
+.input-field textarea.materialize-textarea:focus {
+	border-bottom: 1px solid $logoBlue;
+}
+
+.input-field input[type=text]:focus + label,
+.input-field input[type=tel]:focus + label,
+.input-field input[type=email]:focus + label,
+.input-field textarea.materialize-textarea:focus + label {
+	color: $logoBlue;
+}
+
+button.submit-form {
+	background-color: $logoRed;
+}
+
+button.submit-form:hover {
+	background-color: $defaultText;
+}
+
+a.cancel-button {
+	background-color: $greyBackground;
+	color: $defaultText;
+	margin-left: 10px;
+}
+
+a.cancel-button:hover {
+	background-color: $defaultText;
+	color: $white;
+}
+
+i.material-icons {
+	color: $logoRed;
+	cursor: pointer;
+}
 
 
-// @media #{$small-and-down} {
-//   // styles for small screens and down
-// }
-// @media #{$medium-and-up} {
-//   // styles for medium screens and larger
-// }
-// @media #{$medium-and-down} {
-//   // styles for medium screens and down
-// }
-// @media #{$large-and-up} {
-//   // styles for large screens and up
-// }
+
+@media #{$small-and-down} {
+	.tech-logo {
+		height: 47px;
+	}
+}
+
+@media #{$medium-and-down} {
+	.carousel-copy,
+	.section-header {
+		font-size: 28px;
+	}
+
+	.carousel.carousel-slider.initialized,
+	.carousel.carousel-slider {
+		height: 300px !important;
+	}
+
+	.carousel-overlay {
+		height: 300px;
+	}
+
+	.large-copy h5,h6,p,ul{
+		font-size: 18px;
+	}
+}

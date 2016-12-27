@@ -2,6 +2,8 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+const firebase = require('firebase');
 
+window.Firebase = firebase;
 window.React = React;
 window.ReactDOM = ReactDOM;

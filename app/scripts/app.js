@@ -22,7 +22,6 @@ const Container = React.createClass({
 	componentWillMount() {
 		$(document).ready(() => {
 			const $carousel = $('.carousel-slider.carousel');
-			$('.slider').slider({full_width: true});
 			$('.button-collapse').sideNav();
 			// $('.dropdown-button').dropdown();
 			$carousel.carousel({ full_width: true });

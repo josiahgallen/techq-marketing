@@ -2,7 +2,6 @@
 
 import { footerCopy, logos, profile } from '../data/copy';
 import { getImagePath } from '../utils';
-import { Link } from 'react-router';
 
 const Footer = React.createClass({
 	render: function () {
@@ -22,9 +21,9 @@ const Footer = React.createClass({
 							<h5 className="white-text">Connect with techQ</h5>
 							<ul>
 								<div className="chip">
-							    	<img src={getImagePath(pic)} alt="Contact Person"/>
-							    	<a href={`mailto:${email}`}>wennie@techqmarketing.com</a>
-							  	</div>
+									<img src={getImagePath(pic)} alt="Contact Person"/>
+									<a href={`mailto:${email}`}>wennie@techqmarketing.com</a>
+								</div>
 								{/* <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
 								<li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>
 								<li><a className="grey-text text-lighten-3" href="#!">Link 4</a></li> */}

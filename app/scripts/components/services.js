@@ -11,7 +11,6 @@ const Services = React.createClass({
 					<div className="card-panel services-section">
 						<span className="white-text"><h6>{section.toUpperCase()}</h6></span>
 					</div>
-					{/* <h6 className="services-section">{section.toUpperCase()}</h6> */}
 					<div className="container">
 						<ul>{servicesPage[section]}</ul>
 					</div>

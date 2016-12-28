@@ -27,7 +27,7 @@ const Contact = React.createClass({
 
 	getForm() {
 		return (
-			<form className="col s12"onSubmit={this.onSubmit}>
+			<form className="col s12" onSubmit={this.onSubmit}>
 				<div className="row">
 					<div className="input-field col s6">
 						<input id="first_name" ref="first_name" type="text" required/>
@@ -50,8 +50,8 @@ const Contact = React.createClass({
 						<label htmlFor="company-rep">Company (optional)</label>
 					</div>
 					<div className="input-field col s12">
-						<textarea id="message" ref="message" className="materialize-textarea"/>
-						<label htmlFor="message">Message (optional)</label>
+						<textarea id="message" ref="message" required className="materialize-textarea"/>
+						<label htmlFor="message">Message</label>
 					</div>
 				</div>
 				<button className="submit-form btn waves-effect waves-light" type="submit" name="action">Submit</button>
@@ -63,7 +63,7 @@ const Contact = React.createClass({
 	getSentMessage() {
 		return (
 			<div>
-				<h1>{`Thanks for reaching out ${this.state.first_name}. You will be hearing from us soon.`}</h1>
+				<h1>{`Thanks for reaching out ${this.state.first_name}! You will be hearing from us soon.`}</h1>
 				<Link to="/"><span className="submit-form waves-effect waves-light btn">Home</span></Link>
 			</div>
 		);

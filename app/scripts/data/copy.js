@@ -13,8 +13,10 @@ export const logos = {
 	linkedin: 'linkedin-logo.png'
 };
 
-export const externalLinks = {
-	linkedinWennie: 'https://www.linkedin.com/in/wennie-allen'
+export const profile = {
+	linkedin: 'https://www.linkedin.com/in/wennie-allen',
+	pic: 'profile.jpg',
+	email: 'wennie@techqmarketing.com'
 };
 
 export const carouselCopy = [
@@ -90,30 +92,44 @@ export const companyBlurbs = [
 		profit, and business growth.
 	</p>,
 	<p key="1">
-		Based on over 16 years of industry experience, the company is founded
-		on a passion for technology and innovation. The strength of the company
+		Based on over 16 years of industry experience, the company is founded on
+		a passion for technology and innovation. The strength of the company
 		lies with the deep understanding of hardware, software, and cloud solutions.
 	</p>,
 	<p key="2">
 		The unique experience of the founder in Startup settings brings an
-		understanding for the agility, resourcefulness, and fast-paced demand
-		of any technology company.
+		understanding for the agility, resourcefulness, and fast-paced demand of
+		any technology company.
+	</p>
+];
+
+export const profileBlurb = [
+	<p key="0">
+		<span className="blue-emphasis-words">Wennie Allen</span>, an engineer by
+		training, has been shaping and transforming businesses through her
+		marketing and business development skills. With a proven track record of
+		success, Wennie has helped many large companies, like Texas Instruments
+		and Silicon Labs, in developing new businesses; creating eco systems
+		through new and existing partners; and driving growth.
+	</p>,
+	<p key="1">
+		Wennie has created new businesses from concept to revenue; launched many
+		hardware and software products; authored technical and marketing content;
+		created and deployed go-to-market strategies; and represented in press
+		releases and media interviews.
+	</p>,
+	<p key="2">
+		Wennie possesses strong business acumen, strategic thinking, technical
+		savviness, and collaboration skills. She is experienced in leading a
+		team to work towards a goal, specifically in time and task management,
+		product development, and working across functional teams.
 	</p>,
 	<p key="3">
-		The founder, <span className="blue-emphasis-words">Wennie Allen</span>, has a wide range of experiences in Business
-		Development, Program Management and Product Marketing, as well as
-		engineering roles in Failure Analysis, Verification, Design, and
-		Applications Engineering. With a Proven track record of developing new
-		businesses; creating an eco system through new and existing partners;
-		and driving growth, Wennie possesses strong business acumen, strategic
-		thinking, technical savviness, and collaboration skills. She is
-		experienced in leading a team to work towards a goal, specifically in
-		time and task management, product development, and working across functional teams.
-	</p>,
-	<p key="4">
-		Wennie's ability to expertly translate technical features into customer
-		values is the foundation of her success in marketing and reaching
-		customers on a deeper level.
+		<span className="bold">Specialties:</span> translate technical features into customer
+		values; reaching customers on a personal level, business development,
+		business strategy, product marketing & management, partnerships,
+		leadership, cross-functional team leadership, strategic communication,
+		content & message development
 	</p>
 ];
 

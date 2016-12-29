@@ -8,7 +8,7 @@ const Home = React.createClass({
 
 	_formatCarouselCopy(items) {
 		return items.map((item, index) => {
-			return <li key={index}><h1 className="carousel-copy">{item}</h1></li>;
+			return <li key={index}><h1>{item}</h1></li>;
 		});
 	},
 

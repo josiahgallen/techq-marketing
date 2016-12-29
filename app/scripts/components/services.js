@@ -12,30 +12,22 @@ const Services = React.createClass({
 			const path = getImagePath(banner);
 			return (
 				<div key={index}>
-					<div className="section-pic-wrapper margin-top-80">
+					<h4 className="margin-top-80">{heading.toUpperCase()}</h4>
+					<div className="section-pic-wrapper">
 						<div className="section-pic" style={{ backgroundImage: `url(${path})` }}></div>
 					</div>
-					<div className="row margin-top-40">
-						<div className="col s6">
-							<div className="card-panel services-section">
-								<span className="white-text"><h6>{heading.toUpperCase()}</h6></span>
+					<div className="row">
+						<div className="col s6 margin-top-40">
+							{tagline}
+							<div className="custom-container">
+								<ul>{copy}</ul>
 							</div>
 						</div>
-						<div className="card-panel services-section">
-							<span className="white-text"><h6>RESULTS</h6></span>
-						</div>
-					</div>
-					<div className="row">
-						<div className="col s6">
-							{tagline}
-							{/* <div className="custom-container"> */}
-								<ul>{copy}</ul>
-							{/* </div> */}
-						</div>
-						<div className="col s6">
-							{/* <div className="custom-container"> */}
+						<div className="col s6 margin-top-40">
+							<div className="custom-container">
+								<span className="sub-heading"><h6 className="no-margin">RESULTS</h6></span>
 								<ul>{results}</ul>
-							{/* </div> */}
+							</div>
 						</div>
 					</div>
 				</div>

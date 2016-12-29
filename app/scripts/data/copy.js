@@ -15,8 +15,7 @@ export const logos = {
 
 export const profile = {
 	linkedin: 'https://www.linkedin.com/in/wennie-allen',
-	pic: 'profile.jpg',
-	email: 'wennie@techqmarketing.com'
+	email: 'contact@techqmarketing.com'
 };
 
 export const carouselCopy = [
@@ -136,12 +135,12 @@ export const profileBlurb = [
 export const servicesPage = {
 	strategy: {
 		banner: 'strategy.jpg',
-		tagline: <p key="0">Planning is the starting point for any campaign or launch. At techQ,
+		tagline: <p className="no-margin">Planning is the starting point for any campaign or launch. At techQ,
 		we can help you create your unique:</p>,
 		results: [
 			<li key="0">Tell <span className="red-emphasis-words italic">your story</span> with creative and differentiated marketing</li>,
 			<li key="1">Develop <span className="red-emphasis-words italic">personas</span> targeting your audience</li>,
-			<li key="2">Create effective marketing <span className="red-emphasis-words italic">actions and KPIS</span></li>,
+			<li key="2">Create effective marketing <span className="red-emphasis-words italic">actions and KPIs</span></li>,
 			<li key="3">Form <span className="red-emphasis-words italic">meaningful connections</span> to ecosystems and partners</li>
 		],
 		copy: [
@@ -154,7 +153,7 @@ export const servicesPage = {
 	},
 	execution: {
 		banner: 'whiteboard.jpg',
-		tagline: <p>Whether you are a startup looking to launch your first product, or a
+		tagline: <p className="no-margin">Whether you are a startup looking to launch your first product, or a
 		mature company looking to improve your content,</p>,
 		results: [
 			<li key="0">Plan <span className="red-emphasis-words italic">your product reveal</span> with methodical, process-driven product launch</li>,
@@ -175,7 +174,7 @@ export const servicesPage = {
 	},
 	consulting: {
 		banner: 'charts.jpg',
-		tagline: <p key="0">There are many different types of marketing services. while
+		tagline: <p className="no-margin">There are many different types of marketing services. while
 		techQ can provide many services directly, we can also guide, and provide general feedback on:</p>,
 		results: [
 			<li key="0">Provide advice & counsel</li>,

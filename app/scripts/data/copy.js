@@ -15,7 +15,9 @@ export const logos = {
 
 export const profile = {
 	linkedin: 'https://www.linkedin.com/in/wennie-allen',
-	email: 'contact@techqmarketing.com'
+	pic: 'profile.jpg',
+	contactEmail: 'contact@techqmarketing.com',
+	email: 'wennie@techqmarketing.com'
 };
 
 export const carouselCopy = [

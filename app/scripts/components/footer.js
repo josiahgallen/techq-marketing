@@ -5,7 +5,7 @@ import { getImagePath } from '../utils';
 
 const Footer = React.createClass({
 	render: function () {
-		const { linkedin, email } = profile;
+		const { linkedin, contactEmail } = profile;
 		return (
 			<div>
 				<div className="container">
@@ -21,7 +21,7 @@ const Footer = React.createClass({
 							<h5 className="white-text">Connect with techQ</h5>
 							<ul>
 								<div className="chip">
-									<a href={`mailto:${email}`}>contact@techqmarketing.com</a>
+									<a href={`mailto:${contactEmail}`} target="_blank">contact@techqmarketing.com</a>
 								</div>
 								{/* <li><a className="grey-text text-lighten-3" href="#!">Link 2</a></li>
 								<li><a className="grey-text text-lighten-3" href="#!">Link 3</a></li>

@@ -134,52 +134,62 @@ export const profileBlurb = [
 ];
 
 export const servicesPage = {
-	strategy: [
-		<li key="0"><p>Planning is the starting point for any campaign or launch. At techQ,
-		we can help you create your unique:</p></li>,
-		<li key="1">marketing strategy</li>,
-		<li key="2">positioning & messaging</li>,
-		<li key="3">content strategy</li>,
-		<li key="4">go-to-market strategy</li>,
-		<li key="5">partnerships & ecosystems</li>,
-		<li key="6"><h5 className="sub-heading">Deliverables</h5></li>,
-		<li key="7">Tell <span className="red-emphasis-words italic">your story</span> with creative and differentiated marketing</li>,
-		<li key="8">Develop <span className="red-emphasis-words italic">personas</span> targeting your audience</li>,
-		<li key="9">Create effective marketing <span className="red-emphasis-words italic">actions and KPIS</span></li>,
-		<li key="10">Form <span className="red-emphasis-words italic">meaningful connections</span> to ecosystems and partners</li>
-	],
-	execution: [
-		<li key="0"><p>Whether you are a startup looking to launch your first product, or a
-		mature company looking to improve your content,</p></li>,
-		<li key="1">product launches</li>,
-		<li key="2">pricing model</li>,
-		<li key="3">market research</li>,
-		<li key="4">competitive analysis</li>,
-		<li key="5">market & segment analysis</li>,
-		<li key="6">content creation</li>,
-		<li key="7"><h5 className="sub-heading">Deliverables</h5></li>,
-		<li key="8">Plan <span className="red-emphasis-words italic">your product reveal</span> with methodical, process-driven product launch</li>,
-		<li key="9">Set your company <span className="red-emphasis-words italic">above competition</span> with technical and isightful content</li>,
-		<li key="10">Create <span className="red-emphasis-words italic">compelling use cases</span> in effective business development</li>,
-		<li key="11">Generate <span className="red-emphasis-words italic">revenue growth</span> with profitable pricing strategy</li>,
-		<li key="12">Provide <span className="red-emphasis-words italic">in-depth market & competitive analysis</span> to your segment</li>
-	],
-	consulting: [
-		<li key="0"><p>Whether you are a startup looking to launch your first product, or a
-		mature company looking to improve your content,</p></li>,
-		<li key="1">product launches</li>,
-		<li key="2">pricing model</li>,
-		<li key="3">market research</li>,
-		<li key="4">competitive analysis</li>,
-		<li key="5">market & segment analysis</li>,
-		<li key="6">content creation</li>,
-		<li key="7"><h5 className="sub-heading">Deliverables</h5></li>,
-		<li key="8">Plan <span className="red-emphasis-words italic">your product reveal</span> with methodical, process-driven product launch</li>,
-		<li key="9">Set your company <span className="red-emphasis-words italic">above competition</span> with technical and isightful content</li>,
-		<li key="10">Create <span className="red-emphasis-words italic">compelling use cases</span> in effective business development</li>,
-		<li key="11">Generate <span className="red-emphasis-words italic">revenue growth</span> with profitable pricing strategy</li>,
-		<li key="12">Provide <span className="red-emphasis-words italic">in-depth market & competitive analysis</span> to your segment</li>
-	]
+	strategy: {
+		banner: 'strategy.jpg',
+		tagline: <p key="0">Planning is the starting point for any campaign or launch. At techQ,
+		we can help you create your unique:</p>,
+		results: [
+			<li key="0">Tell <span className="red-emphasis-words italic">your story</span> with creative and differentiated marketing</li>,
+			<li key="1">Develop <span className="red-emphasis-words italic">personas</span> targeting your audience</li>,
+			<li key="2">Create effective marketing <span className="red-emphasis-words italic">actions and KPIS</span></li>,
+			<li key="3">Form <span className="red-emphasis-words italic">meaningful connections</span> to ecosystems and partners</li>
+		],
+		copy: [
+			<li key="0">Marketing strategy</li>,
+			<li key="1">Positioning & messaging</li>,
+			<li key="2">Content strategy</li>,
+			<li key="3">Go-to-market strategy</li>,
+			<li key="4">Partnerships & ecosystems</li>
+		]
+	},
+	execution: {
+		banner: 'whiteboard.jpg',
+		tagline: <p>Whether you are a startup looking to launch your first product, or a
+		mature company looking to improve your content,</p>,
+		results: [
+			<li key="0">Plan <span className="red-emphasis-words italic">your product reveal</span> with methodical, process-driven product launch</li>,
+			<li key="1">Set your company <span className="red-emphasis-words italic">above competition</span> with technical and isightful content</li>,
+			<li key="2">Create <span className="red-emphasis-words italic">compelling use cases</span> in effective business development</li>,
+			<li key="3">Generate <span className="red-emphasis-words italic">revenue growth</span> with profitable pricing strategy</li>,
+			<li key="4">Provide <span className="red-emphasis-words italic">in-depth market & competitive analysis</span> to your segment</li>
+		],
+		copy: [
+			<li key="0">Product launches</li>,
+			<li key="1">Pricing model</li>,
+			<li key="2">Market research</li>,
+			<li key="3">Competitive analysis</li>,
+			<li key="4">Market & segment analysis</li>,
+			<li key="5">Content creation</li>
+
+		]
+	},
+	consulting: {
+		banner: 'charts.jpg',
+		tagline: <p key="0">There are many different types of marketing services. while
+		techQ can provide many services directly, we can also guide, and provide general feedback on:</p>,
+		results: [
+			<li key="0">Provide advice & counsel</li>,
+			<li key="1">Conduct workshops & presentations</li>,
+			<li key="2">Improve your <span className="red-emphasis-words italic">digital footprint</span> with SEO best practices</li>,
+			<li key="3">Expand <span className="red-emphasis-words italic">your reach</span> through  your web design</li>,
+			<li key="4">Enhance or improve <span className="red-emphasis-words italic">your reputation</span> with effective branding</li>
+		],
+		copy: [
+			<li key="0">Branding</li>,
+			<li key="1">Digital marketing</li>,
+			<li key="2">Web design</li>
+		]
+	}
 };
 
 export const footerCopy = {

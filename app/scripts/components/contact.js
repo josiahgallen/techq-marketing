@@ -1,72 +1,17 @@
 /* global React */
 
-import { Link } from 'react-router';
-import { saveContactInfo } from '../../db';
-
 const Contact = React.createClass({
 
-	getInitialState() {
-		return {
-			sent: false,
-			first_name: ''
-		};
-	},
-
-	onSubmit(e) {
-		e.preventDefault();
-		const { first_name, last_name, email, phone, company, message } = this.refs;
-		saveContactInfo(first_name.value, last_name.value, email.value, phone.value, company.value, message.value);
-		this.setState({ sent: true, first_name: first_name.value });
-	},
-
-	onCancel() {
-		Object.keys(this.refs).forEach(ref => {
-			this.refs[ref].value = '';
-		});
-	},
-
-	getForm() {
-		return (
-			<form className="col s12" onSubmit={this.onSubmit}>
-				<div className="row">
-					<div className="input-field col s6">
-						<input id="first_name" ref="first_name" type="text" required/>
-						<label htmlFor="first_name">First Name</label>
-					</div>
-					<div className="input-field col s6">
-						<input id="last_name" ref="last_name" type="text" required/>
-						<label htmlFor="lName">Last Name</label>
-					</div>
-					<div className="input-field col s6">
-						<input id="email" ref="email" type="email" required className="validate"/>
-						<label htmlFor="email" data-error="Please enter a valid email">Email</label>
-					</div>
-					<div className="input-field col s6">
-						<input id="phone" ref="phone" type="tel"/>
-						<label htmlFor="phone">Phone (optional)</label>
-					</div>
-					<div className="input-field col s12">
-						<input id="company-rep" ref="company" type="text"/>
-						<label htmlFor="company-rep">Company (optional)</label>
-					</div>
-					<div className="input-field col s12">
-						<textarea id="message" ref="message" required className="materialize-textarea"/>
-						<label htmlFor="message">Message</label>
-					</div>
-				</div>
-				<button className="submit-form btn waves-effect waves-light" type="submit" name="action">Submit</button>
-				<a className="cancel-button waves-effect waves-light btn" onClick={this.onCancel}>Cancel</a>
-			</form>
-		);
-	},
-
-	getSentMessage() {
+	getTypeForm() {
+		/* eslint-disable */
 		return (
 			<div>
-				<h1>{`Thanks for reaching out ${this.state.first_name}! You will be hearing from us soon.`}</h1>
-				<Link to="/"><span className="submit-form waves-effect waves-light btn">Home</span></Link>
+				<div className="typeform-widget" data-url="https://wennieallen.typeform.com/to/mZ6xyl" data-text="Contact" style={{ width: '100%', height: '500px' }}></div>
+				{(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()}
+				<div style={{ fontFamily: 'Sans-Serif', fontSize: '12px', color: '#999', opacity: '.5', paddingTop: '5px' }}><a href="https://www.typeform.com/examples/forms/contact-form-template/?utm_campaign=mZ6xyl&amp;utm_source=typeform.com-5988387-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded-contactform&amp;utm_term=EN" style={{ color: '#999' }} target="_blank">Contact form</a>powered by Typeform</div>
 			</div>
 		);
+		/* eslint-enable */
 	},
 
 	render: function () {
@@ -78,7 +23,7 @@ const Contact = React.createClass({
 				<div className="container">
 					<div className="company-copy-wrapper">
 						<div className="row">
-							{this.state.sent ? this.getSentMessage() : this.getForm()}
+							{this.getTypeForm()}
 						</div>
 					</div>
 				</div>

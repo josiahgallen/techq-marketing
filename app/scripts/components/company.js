@@ -16,10 +16,10 @@ const Company = React.createClass({
 						<h4 style={{ marginBottom: '40px' }} className="red-emphasis-words centered">Technology focused, business minded</h4>
 						{companyBlurbs}
 					</div>
-					<div className="company-pic-wrap margin-top">
+					<div className="company-pic-wrap margin-top-80">
 						<div className="company-pic" style={{ backgroundImage: `url(${path})` }}></div>
 					</div>
-					<div className="custom-container-2 margin-top">
+					<div className="custom-container-2 margin-top-80">
 						<div className="row">
 							<div className="col s6 profile-pic-wrapper">
 								<img className="profile-pic" src={getImagePath(profile.pic)}/>

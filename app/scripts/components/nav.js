@@ -33,6 +33,10 @@ const Nav = React.createClass({
 		});
 	},
 
+	showHome() {
+		return location.pathname === '/' ? null : <Link to="/"><span className="nav-link">Home</span></Link>;
+	},
+
 	render: function () {
 		const links = this._generateLinks();
 		return (
@@ -50,7 +54,7 @@ const Nav = React.createClass({
 							{links}
 						</ul>
 						<ul className="side-nav" id="mobile-demo">
-							<Link to="/"><span className="nav-link">Home</span></Link>
+							{this.showHome()}
 							{links}
 						</ul>
 					</div>

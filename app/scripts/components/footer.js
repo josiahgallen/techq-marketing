@@ -5,7 +5,7 @@ import { getImagePath } from '../utils';
 
 const Footer = React.createClass({
 	render: function () {
-		const { linkedin, pic, email } = profile;
+		const { linkedin, email } = profile;
 		return (
 			<div>
 				<div className="container">

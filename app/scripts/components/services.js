@@ -1,19 +1,34 @@
 /* global React */
 
 import { servicesPage } from '../data/copy';
+import { getImagePath } from '../utils';
 
 const Services = React.createClass({
 
 	_generateContent() {
-		return Object.keys(servicesPage).map((section, index) => {
+		return Object.keys(servicesPage).map((heading, index) => {
+			const section = servicesPage[heading];
+			const { banner, copy, results, tagline } = section;
+			const path = getImagePath(banner);
 			return (
 				<div key={index}>
-					<div className="card-panel services-section">
-						<span className="white-text"><h6>{section.toUpperCase()}</h6></span>
+					<h4 className="margin-top-80">{heading.toUpperCase()}</h4>
+					<div className="section-pic-wrapper">
+						<div className="section-pic" style={{ backgroundImage: `url(${path})` }}></div>
 					</div>
-					{/* <h6 className="services-section">{section.toUpperCase()}</h6> */}
-					<div className="container">
-						<ul>{servicesPage[section]}</ul>
+					<div className="row">
+						<div className="col s6 margin-top-40">
+							{tagline}
+							<div className="custom-container">
+								<ul>{copy}</ul>
+							</div>
+						</div>
+						<div className="col s6 margin-top-40">
+							<div className="custom-container">
+								<span className="sub-heading"><h6 className="no-margin">RESULTS</h6></span>
+								<ul>{results}</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			);

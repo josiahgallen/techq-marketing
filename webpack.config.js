@@ -53,7 +53,6 @@ var common = {
 		new HtmlWebpackPlugin({
 			title: 'TechQ Marketing',
 			template: path.resolve(APP_PATH, 'index.html'),
-			filename: '200.html',
 			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
 			inject: false
 		}),
@@ -132,7 +131,14 @@ if (TARGET === 'build' || TARGET === 'stats') {
 				compress: {
 					warnings: false
 				}
-			})
+			}),
+            new HtmlWebpackPlugin({
+    			title: 'TechQ Marketing',
+    			template: path.resolve(APP_PATH, 'index.html'),
+    			filename: '200.html',
+    			favicon: path.resolve(APP_PATH, 'images', 'logo_q.ico'),
+    			inject: false
+    		})
 		]
 	});
 }

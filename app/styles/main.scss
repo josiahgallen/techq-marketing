@@ -78,20 +78,22 @@ nav {
 	}
 }
 
-.carousel.carousel-slider.initialized,
-.carousel.carousel-slider {
-	height: 600px !important;
+div.slider {
+	height: 640px !important;
 }
 
-.carousel.carousel-slider .carousel-item {
-	width: 100% !important;
-	height: 100% !important;
-	min-height: 300px !important;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: block;
-	background-position: center;
+ul.slides {
+	height: 600px !important;
+	.caption h3 {
+		font-size: 48px;
+		color: $white;
+		line-height: 1.5;
+		text-shadow: 1px 1px 2px black;
+	}
+}
+
+.slider .indicators .indicator-item.active {
+	background-color: $logoRed;
 }
 
 .company-pic-wrapper {
@@ -122,21 +124,6 @@ div.section-pic {
 	height: 600px;
 	color: $defaultText;
 	margin: 0;
-}
-
-.info-box {
-	background-color: rgba(245, 245, 245, 0.5);
-	padding: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	text-align: center;
-	h1 {
-		font-size: 48px;
-		color: $white;
-		line-height: 1.5;
-		text-shadow: 1px 1px 2px black;
-	}
 }
 
 h4.section-header {
@@ -270,13 +257,15 @@ i.material-icons {
 		font-size: 28px;
 	}
 
-	.carousel.carousel-slider.initialized,
-	.carousel.carousel-slider {
-		height: 300px !important;
+	div.slider {
+		height: 340px !important;
 	}
 
-	.carousel-overlay {
-		height: 300px;
+	ul.slides {
+		height: 300px !important;
+		.caption h3 {
+			font-size: 30px;
+		}
 	}
 
 	.large-copy h5,h6,p,ul{
@@ -289,6 +278,11 @@ i.material-icons {
 }
 
 @media #{$small-and-down} {
+	ul.slides {
+		.caption h3 {
+			font-size: 24px;
+		}
+	}
 	.tech-logo {
 		height: 47px;
 		width: 126px;

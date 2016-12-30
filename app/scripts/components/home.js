@@ -3,30 +3,15 @@
 import ListTile from './listTile';
 import { listTiles, blurbs, carouselCopy } from '../data/copy';
 import { getImagePath } from '../utils';
+import { Slider, Slide } from 'react-materialize';
 
 const Home = React.createClass({
-
-	_formatCarouselCopy(items) {
-		return items.map((item, index) => {
-			return <li key={index}><h1>{item}</h1></li>;
-		});
-	},
 
 	_getCarouselImages() {
 		return carouselCopy.map((spot, index) => {
 			const { img, copy } = spot;
 			const path = getImagePath(img);
-			return (
-				<div key={index} className="carousel-item" style={{ backgroundImage: `url(${path})` }}>
-					<div className="info-box carousel-overlay">
-						<div className="row">
-							<div className="col s10 offset-s1">
-								<ul>{this._formatCarouselCopy(copy)}</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-			);
+			return <Slide key={index} src={path} title={copy} alignment="center"/>;
 		});
 	},
 
@@ -43,9 +28,9 @@ const Home = React.createClass({
 	render() {
 		return (
 			<div className="component-wrapper">
-				<div className="carousel carousel-slider" data-indicators="true">
+				<Slider interval={10000}>
 					{this._getCarouselImages()}
-				</div>
+				</Slider>
 				<div className="custom-container">
 					<div className="row large-copy">
 						<h4 className="section-header s12">Marketing &amp; Business Development for Tech Companies</h4>

@@ -5,8 +5,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 require('materialize-css/dist/css/materialize.css');
 require('materialize-css/dist/js/materialize.js');
-// require('../../node_modules/materialize-css/dist/css/materialize.css');
-// require('../../node_modules/materialize-css/dist/js/materialize.min.js');
 // import { init as initDB } from './db';
 
 // const config = {

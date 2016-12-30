@@ -17,13 +17,13 @@ const Services = React.createClass({
 						<div className="section-pic" style={{ backgroundImage: `url(${path})` }}></div>
 					</div>
 					<div className="row">
-						<div className="col s6 margin-top-40">
+						<div className="col m12 l6 margin-top-40">
 							{tagline}
 							<div className="custom-container">
 								<ul>{copy}</ul>
 							</div>
 						</div>
-						<div className="col s6 margin-top-40">
+						<div className="col m12 l6 margin-top-40">
 							<div className="custom-container">
 								<span className="sub-heading"><h6 className="no-margin">RESULTS</h6></span>
 								<ul>{results}</ul>

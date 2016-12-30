@@ -79,12 +79,13 @@ nav {
 }
 
 div.slider {
-	height: 640px !important;
+	height: 628px !important;
 }
 
 ul.slides {
 	height: 600px !important;
-	.caption h3 {
+	h5 {
+		padding-top: 50px;
 		font-size: 48px;
 		color: $white;
 		line-height: 1.5;
@@ -92,8 +93,13 @@ ul.slides {
 	}
 }
 
+.slider .indicators .indicator-item {
+	height: 8px;
+	width: 8px;
+}
+
 .slider .indicators .indicator-item.active {
-	background-color: $logoRed;
+	background-color: $defaultText;
 }
 
 .company-pic-wrapper {
@@ -230,12 +236,14 @@ i.material-icons {
 }
 
 .profile-pic-wrapper {
-	display: flex;
-	align-items: center;
-    justify-content: center;
+	text-align: center;
+	h6 {
+		font-size: 22px;
+	}
 }
 
 .profile-pic {
+	border-radius: 50%;
 	height: 450px;
 }
 
@@ -258,12 +266,13 @@ i.material-icons {
 	}
 
 	div.slider {
-		height: 340px !important;
+		height: 328px !important;
 	}
 
 	ul.slides {
 		height: 300px !important;
-		.caption h3 {
+		h5 {
+			padding: 0;
 			font-size: 30px;
 		}
 	}
@@ -279,7 +288,7 @@ i.material-icons {
 
 @media #{$small-and-down} {
 	ul.slides {
-		.caption h3 {
+		h5 {
 			font-size: 20px;
 		}
 	}

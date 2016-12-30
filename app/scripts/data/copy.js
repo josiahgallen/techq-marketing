@@ -23,24 +23,26 @@ export const profile = {
 export const carouselCopy = [
 	{
 		img: 'tablet-coffee.jpg',
-		copy: `
-				Helping technology companies achieve revenue, profit, and business
-				growth through blended marketing and business development services
-			`
+		copy: <div>
+			Helping technology companies achieve revenue, profit, and business
+			growth through blended marketing and business development services
+		</div>
 	},
 	{
 		img: 'circuit-board-wash.jpg',
-		copy: `
-				Tell your story, plan your product reveal, and create meaningful
-				connections to set your company apart
-			`
+		copy: <div>
+			Tell your story, plan your product reveal, and create meaningful
+			connections to set your company apart
+		</div>
 	},
 	{
 		img: 'asian-girl.jpg',
-		copy: `
-			Passionate about technology and innovation
-			Deep understanding of hardware, software, and cloud solutions
-		`
+		copy: (
+			<div>
+				<div>Passionate about technology and innovation</div>
+				<div>Deep understanding of hardware, software, and cloud solutions</div>
+			</div>
+		)
 	}
 ];
 

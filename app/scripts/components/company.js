@@ -23,6 +23,7 @@ const Company = React.createClass({
 						<div className="row">
 							<div className="col s12 m6 profile-pic-wrapper">
 								<img className="profile-pic" src={getImagePath(profile.pic)}/>
+								<h6>Founder &amp; CEO</h6>
 							</div>
 							<div className="col s12 m6">{profileBlurb}</div>
 						</div>

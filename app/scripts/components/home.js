@@ -11,7 +11,7 @@ const Home = React.createClass({
 		return carouselCopy.map((spot, index) => {
 			const { img, copy } = spot;
 			const path = getImagePath(img);
-			return <Slide key={index} src={path} title={copy} alignment="center"/>;
+			return <Slide key={index} src={path} alignment="center">{copy}</Slide>;
 		});
 	},
 
@@ -28,7 +28,7 @@ const Home = React.createClass({
 	render() {
 		return (
 			<div className="component-wrapper">
-				<Slider interval={10000}>
+				<Slider interval={6000}>
 					{this._getCarouselImages()}
 				</Slider>
 				<div className="custom-container">

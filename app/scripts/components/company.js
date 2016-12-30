@@ -21,10 +21,10 @@ const Company = React.createClass({
 					</div>
 					<div className="custom-container-2 margin-top-80">
 						<div className="row">
-							<div className="col s6 profile-pic-wrapper">
+							<div className="col s12 m6 profile-pic-wrapper">
 								<img className="profile-pic" src={getImagePath(profile.pic)}/>
 							</div>
-							<div className="col s6">{profileBlurb}</div>
+							<div className="col s12 m6">{profileBlurb}</div>
 						</div>
 					</div>
 				</div>

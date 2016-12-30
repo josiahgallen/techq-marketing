@@ -43,7 +43,7 @@ const Home = React.createClass({
 	render() {
 		return (
 			<div className="component-wrapper">
-				<div className="carousel carousel-slider">
+				<div className="carousel carousel-slider" data-indicators="true">
 					{this._getCarouselImages()}
 				</div>
 				<div className="custom-container">

@@ -5,6 +5,10 @@ import { getImagePath } from '../utils';
 
 const Nav = React.createClass({
 
+	closeSideNav() {
+		$('.side-nav').sideNav('hide');
+	},
+
 	clearActiveLink() {
 		$('li').removeClass('active');
 	},
@@ -18,15 +22,17 @@ const Nav = React.createClass({
 		} else if(nodeName === 'A') {
 			parentNode.classList.add('active');
 		}
+		this.closeSideNav();
 	},
 
-	_generateLinks() {
+	_generateLinks(isSideNav=false) {
 		return navLinks.map((link, index) => {
 			const { name, path } = link;
+			const hide = isSideNav ? this.closeSideNav : null;
 			return (
 				<li key={index} onClick={this.activeLink}>
 					<Link to={path}>
-						<span className="nav-link">{name}</span>
+						<span className="nav-link" onClick={hide}>{name}</span>
 					</Link>
 				</li>
 			);
@@ -34,11 +40,10 @@ const Nav = React.createClass({
 	},
 
 	showHome() {
-		return location.pathname === '/' ? null : <Link to="/"><span className="nav-link">Home</span></Link>;
+		return location.pathname === '/' ? null : <li onClick={this.closeSideNav}><Link to="/"><span className="nav-link">Home</span></Link></li>;
 	},
 
 	render: function () {
-		const links = this._generateLinks();
 		return (
 			<div>
 				<nav>
@@ -51,11 +56,11 @@ const Nav = React.createClass({
 						</Link>
 						<a data-activates="mobile-demo" className="button-collapse"><i className="material-icons">menu</i></a>
 						<ul className="right hide-on-med-and-down">
-							{links}
+							{this._generateLinks()}
 						</ul>
 						<ul className="side-nav" id="mobile-demo">
 							{this.showHome()}
-							{links}
+							{this._generateLinks(true)}
 						</ul>
 					</div>
 				</nav>

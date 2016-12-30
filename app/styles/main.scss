@@ -264,13 +264,6 @@ i.material-icons {
 	margin: 0;
 }
 
-@media #{$small-and-down} {
-	.tech-logo {
-		height: 47px;
-		width: 126px;
-	}
-}
-
 @media #{$medium-and-down} {
 	.info-box h1,
 	.section-header {
@@ -288,5 +281,24 @@ i.material-icons {
 
 	.large-copy h5,h6,p,ul{
 		font-size: 18px;
+	}
+
+	.profile-pic {
+		height: 250px;
+	}
+}
+
+@media #{$small-and-down} {
+	.tech-logo {
+		height: 47px;
+		width: 126px;
+	}
+
+	.custom-container-2 {
+		margin: 0 40px;
+	}
+
+	.profile-pic {
+		margin-top: 80px;
 	}
 }

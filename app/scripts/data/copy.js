@@ -48,24 +48,24 @@ export const carouselCopy = [
 
 export const listTiles = {
 	strategy: [
-		'Marketing Strategy',
-		'Positioning & Messaging',
-		'Content Strategy',
-		'Go-to-Market Strategy',
-		'Partnerships & Ecosystems'
+		'Marketing strategy',
+		'Positioning & messaging',
+		'Content strategy',
+		'Go-to-market strategy',
+		'Partnerships & ecosystems'
 	],
 	execution: [
-		'Product Launches',
-		'Pricing Model',
-		'Market Research',
-		'Competitive Analysis',
-		'Market & Segment Analysis',
-		'Content Creation'
+		'Product launches',
+		'Pricing model',
+		'Market research',
+		'Competitive analysis',
+		'Market & segment analysis',
+		'Content creation'
 	],
 	consulting: [
 		'Digital marketing',
 		'Web design',
-		'Advice & Counsel',
+		'Advice & counsel',
 		'Workshops & presentations'
 	]
 };

@@ -71,7 +71,7 @@ export const listTiles = {
 };
 
 export const blurbs = {
-	one: `Specializing in B2B inbound markeing with a technology focus.
+	one: `Specializing in B2B inbound marketing with a technology focus.
 	We help the sales team win deals; attract customers online and
 	convert to wins; serve as baseline for promotional marketing like
 	digital, event, and social, ultimately help YOU create revenue

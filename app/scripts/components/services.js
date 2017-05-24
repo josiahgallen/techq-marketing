@@ -35,7 +35,7 @@ const Services = React.createClass({
 		});
 	},
 
-	render: function () {
+	render() {
 		return (
 			<div>
 				<div className="card-panel second-nav">

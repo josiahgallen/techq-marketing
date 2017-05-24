@@ -4,7 +4,7 @@ import { footerCopy, logos, profile } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Footer = React.createClass({
-	render: function () {
+	render() {
 		const { linkedin, contactEmail } = profile;
 		return (
 			<div>

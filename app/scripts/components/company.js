@@ -4,7 +4,7 @@ import { companyBlurbs, profile, profileBlurb } from '../data/copy';
 import { getImagePath } from '../utils';
 
 const Company = React.createClass({
-	render: function () {
+	render() {
 		const path = getImagePath('company_pic.png');
 		return (
 			<div className="component-wrapper">

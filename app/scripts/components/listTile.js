@@ -6,7 +6,7 @@ const ListTile = React.createClass({
 		list: React.PropTypes.array.isRequired
 	},
 
-	render: function () {
+	render() {
 		const { title, list } = this.props;
 		const bullets = list.map((item, index) => {
 			return <li key={index}>{item}</li>;

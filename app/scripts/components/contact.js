@@ -14,7 +14,7 @@ const Contact = React.createClass({
 		/* eslint-enable */
 	},
 
-	render: function () {
+	render() {
 		return (
 			<div className="component-wrapper">
 				<div className="card-panel second-nav">

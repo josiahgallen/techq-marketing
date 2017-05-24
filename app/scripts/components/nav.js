@@ -40,10 +40,10 @@ const Nav = React.createClass({
 	},
 
 	showHome() {
-		return location.pathname === '/' ? null : <li onClick={this.closeSideNav}><Link to="/"><span className="nav-link">Home</span></Link></li>;
+		return location.pathname === '/' ? null : <li onClick={this.activeLink}><Link to="/"><span className="nav-link">Home</span></Link></li>;
 	},
 
-	render: function () {
+	render() {
 		return (
 			<div>
 				<nav>

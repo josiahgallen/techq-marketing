@@ -4,7 +4,7 @@ import { Link } from 'react-router';
 
 const NotFound = React.createClass({
 
-	render: function () {
+	render() {
 		return (
 			<div className="container">
 				<h1>404 Page not Found</h1>
